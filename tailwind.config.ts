@@ -42,6 +42,13 @@ const config = {
             fontWeight: 500,
           },
         ],
+        h3: [
+          "1rem",
+          {
+            lineHeight: "1.2",
+            fontWeight: 500,
+          },
+        ],
         p: [
           "1rem",
           {
@@ -84,6 +91,7 @@ const config = {
         ],
       },
       borderRadius: {
+        xl: "2.8125rem",
         lg: ".5rem",
         md: "calc(.5rem - 2px)",
         sm: "calc(.5rem - 4px)",
@@ -91,12 +99,14 @@ const config = {
       borderWidth: {
         sm: "1px",
         md: "2px",
-        lg: "4px",
+        lg: "3px",
+        xl: "4px",
       },
       padding: {
-        "root-top": "5rem",
-        "root-top-md": "4rem",
-        "root-top-sm": "5rem",
+        "root-top": "5.5rem",
+        "root-top-lg": "4.7rem",
+        "root-top-md": "4.3rem",
+        "root-top-sm": "3.75rem",
         "root-inline": "5rem",
         "root-inline-sm": "2.5rem",
         "section-block": "4rem",
