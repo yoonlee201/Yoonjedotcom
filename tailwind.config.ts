@@ -11,6 +11,7 @@ const config = {
     },
     fontFamily: {
       "krona-one": ["Krona One", "sans-serif"],
+      krub: ["Krub", "sans-serif"],
     },
     colors: {
       transparent: "transparent",
@@ -34,11 +35,18 @@ const config = {
             fontWeight: 600,
           },
         ],
+        h2: [
+          "1.25rem",
+          {
+            lineHeight: "1.2",
+            fontWeight: 500,
+          },
+        ],
         p: [
           "1rem",
           {
             lineHeight: "1.5",
-            fontWeight: 400,
+            fontWeight: 300,
           },
         ],
         button: [
