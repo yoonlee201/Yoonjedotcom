@@ -29,8 +29,7 @@
     "**/*.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "**/*.cjs",
     "**/*.mjs"
-  ],
+, "../routes.ts"  ],
   "exclude": ["node_modules"]
 }
