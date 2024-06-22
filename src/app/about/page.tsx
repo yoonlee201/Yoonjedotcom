@@ -1,18 +1,15 @@
-import About from "@/app/_components/aboutPage/About";
+import About from '@/app/_components/aboutPage/About';
 
 export const route = '/about';
 
 const Page = () => {
-  return (
-    <main className="lg:mb-0 mb-[0rem]">
-        <section className="w-full h-full flex justify-center lg:pt-root-top pt-root-top-md pb-0 lg:pb-[3.5rem] overflow-y-auto">
-            <div className="m-4 min-w-[90vw] lg:min-w-[65vw] lg:max-h-[calc(100vh-18rem)] lg:min-h-[43rem] min-h-[47rem] ">
+    return (
+        <main className="mb-[0rem] lg:mb-0">
+            <section className="flex h-full w-full justify-center overflow-y-auto pb-0 pt-root-top-md lg:pb-[3.5rem] lg:pt-root-top">
                 <About />
-            </div>
-        </section>
-    </main>
-  );
-}
+            </section>
+        </main>
+    );
+};
 
 export default Page;
-
