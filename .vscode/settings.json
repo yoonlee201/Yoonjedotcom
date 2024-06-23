@@ -5,5 +5,8 @@
     "notebook.formatOnSave.enabled": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSaveMode": "file",
-    "editor.formatOnType": false
+    "editor.formatOnType": false,
+    "[xml]": {
+        "editor.defaultFormatter": "redhat.vscode-xml"
+    }
 }
