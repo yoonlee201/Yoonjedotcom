@@ -10,7 +10,7 @@ const config = {
     bracketSameLine: true,
     jsxBracketSameLine: false,
     jsxSingleQuote: false,
-    printWidth: 100,
+    printWidth: 80,
     proseWrap: 'preserve',
     quoteProps: 'as-needed',
     requirePragma: false,

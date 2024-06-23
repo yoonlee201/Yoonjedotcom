@@ -1,0 +1,15 @@
+export const skills = [
+    { name: 'javascript', percent: 60, icon: '/devicons/javascript.svg' },
+    { name: 'react', percent: 75, icon: '/devicons/react.svg' },
+    { name: 'java', percent: 65, icon: '/devicons/java.svg' },
+    { name: 'c', percent: 65, icon: '/devicons/c.svg' },
+    { name: 'typescript', percent: 70, icon: '/devicons/typescript.svg' },
+    { name: 'node.js', percent: 60, icon: '/devicons/nodejs.svg' },
+    { name: 'next.js', percent: 40, icon: '/devicons/nextjs.svg' },
+    { name: 'git', percent: 80, icon: '/devicons/git.svg' },
+    { name: 'mongodb', percent: 30, icon: '/devicons/mongodb.svg' },
+    { name: 'prisma', percent: 35, icon: '/devicons/prisma.svg' },
+    { name: 'trpc', percent: 55, icon: '/devicons/trpc.svg' },
+    { name: 'tailwind', percent: 30, icon: '/devicons/tailwind.svg' },
+    // { name: 'python', percent: 20, icon: '/devicons/python.svg' },
+];

@@ -8,45 +8,50 @@ const COLORS = ['hsl(230, 11%, 57%)', 'hsl(0, 7%, 83%)'];
 
 const Skillset: React.FC = () => {
     const data = skills.map(skill => [
-        { name: skill.type, value: skill.percent },
+        { name: skill.name, value: skill.percent },
         { name: 'Other', value: 100 - skill.percent },
     ]);
 
     return (
-        <div className="flex flex-wrap justify-center">
+        <div className="flex w-full flex-wrap justify-center">
             {data.map((dataSet, i) => (
                 <div
                     key={i}
-                    className="m-2 flex flex-col items-center"
-                    style={{ minWidth: '120px', maxWidth: '170px' }}>
-                    <ResponsiveContainer
-                        width={150}
-                        height={150}>
-                        <PieChart>
-                            <Pie
-                                data={dataSet}
-                                cx={`50%`}
-                                cy={`50%`}
-                                innerRadius={50}
-                                outerRadius={63}
-                                dataKey="value">
-                                {dataSet.map((entry, index) => (
-                                    <Cell
-                                        key={`cell-${index}`}
-                                        fill={COLORS[index % COLORS.length]}
-                                    />
-                                ))}
-                            </Pie>
-                            <Tooltip />
-                        </PieChart>
-                    </ResponsiveContainer>
-                    <Image
-                        className={`absolute mt-10 w-7 h-7`}
-                        width={7}
-                        height={7}
-                        src={skills[i].icon}
-                        alt={''}
-                    />
+                    className="m-2 flex flex-col items-center">
+                    <div className="relative h-[100px] w-[100px] sm:h-[120px] sm:w-[120px] md:h-[130px] md:w-[130px]">
+                        <ResponsiveContainer
+                            width="100%"
+                            height="100%">
+                            <PieChart>
+                                <Pie
+                                    data={dataSet}
+                                    cx="50%"
+                                    cy="50%"
+                                    innerRadius="85%"
+                                    outerRadius="100%"
+                                    startAngle={90}
+                                    endAngle={450}
+                                    dataKey="value">
+                                    {dataSet.map((entry, index) => (
+                                        <Cell
+                                            key={`cell-${index}`}
+                                            fill={COLORS[index % COLORS.length]}
+                                        />
+                                    ))}
+                                </Pie>
+                                <Tooltip />
+                            </PieChart>
+                        </ResponsiveContainer>
+                        <div className="absolute inset-0 flex items-center justify-center">
+                            <Image
+                                className="h-[35%] w-[35%]"
+                                width={50}
+                                height={50}
+                                src={skills[i].icon}
+                                alt={skills[i].name}
+                            />
+                        </div>
+                    </div>
                 </div>
             ))}
         </div>
