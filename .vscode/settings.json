@@ -8,5 +8,6 @@
     "editor.formatOnType": false,
     "[xml]": {
         "editor.defaultFormatter": "redhat.vscode-xml"
-    }
+    },
+    "cSpell.words": ["devicons"]
 }

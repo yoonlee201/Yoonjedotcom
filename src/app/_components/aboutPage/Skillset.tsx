@@ -14,12 +14,12 @@ const Skillset: React.FC = () => {
     ]);
 
     return (
-        <div className="overflow-hidden flex w-[90%] flex-wrap justify-center pt-6">
+        <div className="flex w-[90%] flex-wrap justify-center overflow-hidden pt-6">
             {data.map((dataSet, i) => (
                 <div
                     key={i}
                     className="m-2 flex flex-col items-center">
-                    <div className="relative h-[100px] w-[100px] sm:h-[120px] sm:w-[120px] md:h-[130px] md:w-[130px]">
+                    <div className="relative h-[6.25rem] w-[6.25rem] sm:h-[7.5rem] sm:w-[7.5rem] md:h-[8.125rem] md:w-[8.125rem]">
                         <ResponsiveContainer
                             width="100%"
                             height="100%">

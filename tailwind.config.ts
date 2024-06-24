@@ -96,9 +96,9 @@ const config = {
             },
             borderRadius: {
                 xl: '2.8125rem',
-                lg: '.5rem',
-                md: 'calc(.5rem - 2px)',
-                sm: 'calc(.5rem - 4px)',
+                lg: '1.333rem',
+                md: '0.875rem',
+                sm: 'calc(.5rem - 2px)',
             },
             borderWidth: {
                 sm: '1px',

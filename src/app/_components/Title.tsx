@@ -9,26 +9,32 @@ export type TitleProps = PropsWithChildren<HTMLAttributes<HTMLHeadingElement>> &
 export const Title = ({
     children,
     color = 'blue',
+    size = 'h1',
     className,
     ...rest
 }: TitleProps) => {
     return (
         <h1
-            className={titleVariants({ color, className })}
+            className={titleVariants({ color, size, className })}
             {...rest}>
             {children}
         </h1>
     );
 };
 
-const titleVariants = cva('flex text-krona-one pl-[1rem] pt-[3rem] text-h1', {
+const titleVariants = cva('flex text-krona-one', {
     variants: {
+        size: {
+            h1: 'text-h1 pt-[3rem]',
+            h2: 'text-h2',
+        },
         color: {
             blue: 'text-blue',
             beige: 'text-beige',
         },
     },
     defaultVariants: {
+        size: 'h1',
         color: 'blue',
     },
 });

@@ -67,6 +67,7 @@ const NavBar = () => {
                     className="mr-9 md:hidden"
                     onClick={toggleDropdown}>
                     <Image
+                    className='svg-beige'
                         src={MenuIcon}
                         alt="navigation menu"
                         width={25}
@@ -101,7 +102,7 @@ const Dropdown = forwardRef<HTMLDivElement, {}>(function ({}, ref) {
     return (
         <div
             ref={ref}
-            className="absolute right-0 top-full mt-1 min-w-56 rounded-md border border-blue bg-blue shadow-xl"
+            className="absolute right-0 top-full mt-1 min-w-56 rounded-sm border border-blue bg-blue shadow-xl"
             role="menu">
             <ul className="grid grid-flow-row items-start justify-stretch">
                 <li className="border-b-2 border-blue-2 px-4 py-3 text-navlink hover:bg-blue-2">
