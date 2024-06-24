@@ -21,7 +21,7 @@ export const Title = ({
     );
 };
 
-const titleVariants = cva('flex text-krona-one pl-[1rem] pt-[6rem] text-h1', {
+const titleVariants = cva('flex text-krona-one pl-[1rem] pt-[3rem] text-h1', {
     variants: {
         color: {
             blue: 'text-blue',

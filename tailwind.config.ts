@@ -25,6 +25,9 @@ const config = {
                 DEFAULT: 'hsl(230, 11%, 57%)',
                 2: 'hsl(230, 14%, 46%)',
             },
+            red: {
+                DEFAULT: 'hsl(0, 51%, 57%)',
+            },
         },
 
         extend: {

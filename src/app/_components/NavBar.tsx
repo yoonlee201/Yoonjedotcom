@@ -9,7 +9,7 @@ import React, {
 } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Logo from '@/app/_components/Logo';
+import { Logo } from '@/app/_components/Logo';
 import MenuIcon from '~/public/menu.svg';
 
 const NavBar = () => {

@@ -14,7 +14,7 @@ const Skillset: React.FC = () => {
     ]);
 
     return (
-        <div className="overflow-hidden flex w-[90%] flex-wrap justify-center">
+        <div className="overflow-hidden flex w-[90%] flex-wrap justify-center pt-6">
             {data.map((dataSet, i) => (
                 <div
                     key={i}

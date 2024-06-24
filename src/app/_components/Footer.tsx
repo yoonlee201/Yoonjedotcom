@@ -1,10 +1,7 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
-import LinkedIn from '~/public/linkedin.svg';
-import Github from '~/public/github.svg';
-import Instagram from '~/public/instagram.svg';
+import { ConnectIcons } from '@/app/_components/Logo';
 
 const Footer = () => {
     return (
@@ -16,20 +13,7 @@ const Footer = () => {
                 <p className="text-krub text-p">
                     Designed and Developed by Yoonje Lee
                 </p>
-                <div className="flex gap-3">
-                    <Image
-                        src={LinkedIn}
-                        alt="LinkedIn"
-                    />
-                    <Image
-                        src={Github}
-                        alt="Github"
-                    />
-                    <Image
-                        src={Instagram}
-                        alt="Instagram"
-                    />
-                </div>
+                <ConnectIcons className="flex gap-3" />
             </div>
         </footer>
     );
