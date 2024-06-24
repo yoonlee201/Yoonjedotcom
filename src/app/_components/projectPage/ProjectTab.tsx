@@ -14,32 +14,41 @@ interface ProjectTabProps {
 }
 
 const ProjectTab = ({ projectList }: ProjectTabProps) => {
+    if (!projectList || projectList.length === 0) {
+        return <div>No projects to display</div>;
+    }
+    
     return (
         <>
-            {projectList.map(({ projectImage, skillList, description }) => {
-                <div className="flex flex-col rounded-lg border-4 border-blue p-5 md:w-[80%] md:flex-row">
-                    <div className="relative h-[12.897rem] w-[100%] md:h-[12.897rem] md:w-[15.625rem]">
-                        <Image
-                            //  Photo by luis gomes:
-                            // https://www.pexels.com/photo/close-up-photo-of-programming-of-codes-546819/
-                            className="rounded-md object-cover"
-                            src={projectImage ?? '/programming-screen.jpg'}
-                            alt="Programming code on a computer screen"
-                            fill
-                            sizes="15.625rem"
-                        />
-                    </div>
-                    <div className="flex flex-col gap-1 md:pl-[1rem]">
-                        <Title size={'h2'}>Project Title</Title>
-                        <div className="flex flex-wrap gap-1">
-                            {skillList.map(s => (
-                                <SkillCapsule skill={s} />
-                            ))}
+            {projectList.map(
+                ({ projectImage, skillList, description }, index) => (
+                    <div
+                        key={index}
+                        className="flex flex-col rounded-lg border-4 border-blue p-5 md:w-[80%] md:flex-row">
+                        <div className="relative h-[12.897rem] w-[100%] md:h-[12.897rem] md:w-[15.625rem]">
+                            <Image
+                                className="rounded-md object-cover"
+                                src={projectImage ?? '/programming-screen.jpg'}
+                                alt="Programming code on a computer screen"
+                                fill
+                                sizes="15.625rem"
+                            />
                         </div>
-                        <p>{description}</p>
+                        <div className="flex flex-col gap-1 md:pl-[1rem]">
+                            <Title size={'h2'}>Project Title</Title>
+                            <div className="flex flex-wrap gap-1">
+                                {skillList.map((s, skillIndex) => (
+                                    <SkillCapsule
+                                        key={skillIndex}
+                                        skill={s}
+                                    />
+                                ))}
+                            </div>
+                            <p>{description}</p>
+                        </div>
                     </div>
-                </div>;
-            })}
+                )
+            )}
         </>
     );
 };
