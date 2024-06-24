@@ -103,15 +103,27 @@ const Dropdown = forwardRef<HTMLDivElement, {}>(function ({}, ref) {
             ref={ref}
             className="absolute right-0 top-full mt-1 min-w-56 rounded-md border border-blue bg-blue shadow-xl"
             role="menu">
-            <ul className="grid grid-flow-row items-start justify-stretch px-4">
-                <li className="py-3 text-navlink">
-                    <Link href="/about">About</Link>
+            <ul className="grid grid-flow-row items-start justify-stretch">
+                <li className="border-b-2 border-blue-2 px-4 py-3 text-navlink hover:bg-blue-2">
+                    <Link
+                        href="/about"
+                        className="block h-full w-full">
+                        About
+                    </Link>
                 </li>
-                <li className="py-3 text-navlink">
-                    <Link href="/project">Project</Link>
+                <li className="border-b-2 border-blue-2 px-4 py-3 text-navlink hover:bg-blue-2">
+                    <Link
+                        href="/project"
+                        className="block h-full w-full">
+                        Project
+                    </Link>
                 </li>
-                <li className="py-3 text-navlink">
-                    <Link href="/resume">Resume</Link>
+                <li className="px-4 py-3 text-navlink hover:bg-blue-2">
+                    <Link
+                        href="/resume"
+                        className="block h-full w-full">
+                        Resume
+                    </Link>
                 </li>
             </ul>
         </div>
