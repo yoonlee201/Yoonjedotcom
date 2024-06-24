@@ -1,4 +1,5 @@
 'use client';
+
 import React from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 import { skills } from '@/constants/skills';
@@ -13,7 +14,7 @@ const Skillset: React.FC = () => {
     ]);
 
     return (
-        <div className="flex w-full flex-wrap justify-center">
+        <div className="overflow-hidden flex w-[90%] flex-wrap justify-center">
             {data.map((dataSet, i) => (
                 <div
                     key={i}

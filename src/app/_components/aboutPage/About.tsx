@@ -1,4 +1,5 @@
 'use client';
+
 import AboutCell from '@/app/_components/aboutPage/AboutCell';
 import Skillset from '@/app/_components/aboutPage/Skillset';
 import { Title } from '@/app/_components/Title';
@@ -10,9 +11,7 @@ const About = () => {
                 <Title>About Me</Title>
                 <AboutCell />
             </div>
-            <div className="w-[90%] overflow-hidden">
-                <Skillset />
-            </div>
+            <Skillset />
         </div>
     );
 };
