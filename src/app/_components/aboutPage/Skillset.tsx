@@ -4,6 +4,7 @@ import React from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 import { skills } from '@/constants/skills';
 import Image from 'next/image';
+import { Title } from '../Title';
 
 const COLORS = ['hsl(230, 11%, 57%)', 'hsl(0, 7%, 83%)'];
 
@@ -53,6 +54,11 @@ const Skillset: React.FC = () => {
                             />
                         </div>
                     </div>
+                    <Title
+                        size={'h2'}
+                        className="w-full justify-center">
+                        {skills[i].name}
+                    </Title>
                 </div>
             ))}
         </div>

@@ -19,13 +19,13 @@ const ProjectTab = ({ projectList }: ProjectTabProps) => {
     }
     
     return (
-        <>
+        <section className='flex flex-col w-full h-full items-center jusitfy-center gap-3'>
             {projectList.map(
                 ({ projectImage, skillList, description }, index) => (
                     <div
                         key={index}
-                        className="flex flex-col rounded-lg border-4 border-blue p-5 md:w-[80%] md:flex-row">
-                        <div className="relative h-[12.897rem] w-[100%] md:h-[12.897rem] md:w-[15.625rem]">
+                        className="mt-3 flex flex-col rounded-lg border-4 border-blue p-5 sm:w-[80%] sm:flex-row">
+                        <div className="relative h-[12.897rem] w-[100%] sm:h-[12.897rem] sm:w-[15.625rem]">
                             <Image
                                 className="rounded-md object-cover"
                                 src={projectImage ?? '/programming-screen.jpg'}
@@ -34,7 +34,7 @@ const ProjectTab = ({ projectList }: ProjectTabProps) => {
                                 sizes="15.625rem"
                             />
                         </div>
-                        <div className="flex flex-col gap-1 md:pl-[1rem]">
+                        <div className="flex flex-col gap-1 sm:pl-[1.3rem]">
                             <Title size={'h2'}>Project Title</Title>
                             <div className="flex flex-wrap gap-1">
                                 {skillList.map((s, skillIndex) => (
@@ -49,7 +49,7 @@ const ProjectTab = ({ projectList }: ProjectTabProps) => {
                     </div>
                 )
             )}
-        </>
+        </section>
     );
 };
 
