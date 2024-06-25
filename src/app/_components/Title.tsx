@@ -30,7 +30,7 @@ const titleVariants = cva('flex text-krona-one', {
             h3: 'text-h3',
         },
         color: {
-            blue: 'text-blue',
+            blue: 'text-blue-2',
             beige: 'text-beige',
         },
     },

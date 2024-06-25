@@ -4,12 +4,17 @@ import Image from 'next/image';
 import Node from '~/public/devicons/nodejs.svg';
 import { skills } from '~/src/constants/skills';
 import { Title } from '@/app/_components/Title';
+import Link from 'next/link';
+import Github from '~/public/github.svg';
+import Demo from '~/public/demo.svg';
 
 interface ProjectTabProps {
     projectList: {
         projectImage: string | null;
         skillList: string[];
         description: string;
+        githubLink: string | null;
+        demoLink: string | null;
     }[];
 }
 
@@ -17,11 +22,20 @@ const ProjectTab = ({ projectList }: ProjectTabProps) => {
     if (!projectList || projectList.length === 0) {
         return <div>No projects to display</div>;
     }
-    
+
     return (
-        <section className='flex flex-col w-full h-full items-center jusitfy-center gap-3'>
+        <section className="flex h-full w-full flex-col items-center justify-center gap-3">
             {projectList.map(
-                ({ projectImage, skillList, description }, index) => (
+                (
+                    {
+                        projectImage,
+                        skillList,
+                        description,
+                        githubLink,
+                        demoLink,
+                    },
+                    index
+                ) => (
                     <div
                         key={index}
                         className="mt-3 flex flex-col rounded-lg border-4 border-blue p-5 sm:w-[80%] sm:flex-row">
@@ -34,18 +48,48 @@ const ProjectTab = ({ projectList }: ProjectTabProps) => {
                                 sizes="15.625rem"
                             />
                         </div>
-                        <div className="flex flex-col gap-1 sm:pl-[1.3rem]">
-                            <Title size={'h2'}>Project Title</Title>
-                            <div className="flex flex-wrap gap-1">
-                                {skillList.map((s, skillIndex) => (
-                                    <SkillCapsule
-                                        key={skillIndex}
-                                        skill={s}
-                                    />
-                                ))}
+                        <hgroup className="inline-flex flex-col justify-between gap-1 sm:pl-[1.3rem]">
+                            <header className="flex flex-col gap-1">
+                                <Title size={'h2'}>Project Title</Title>
+                                <ul className="flex flex-wrap gap-1">
+                                    {skillList.map((s, skillIndex) => (
+                                        <SkillCapsule
+                                            key={skillIndex}
+                                            skill={s}
+                                        />
+                                    ))}
+                                </ul>
+                                <p className="pt-[0.5rem] text-[0.8rem] text-p text-blue-2">
+                                    {description}
+                                </p>
+                            </header>
+                            <div className="inline-flex gap-2">
+                                {githubLink && (
+                                    <Link
+                                        href={githubLink}
+                                        className="flex h-[1.5rem] items-center gap-1 rounded-sm bg-blue p-1 text-[0.8rem] text-p text-beige">
+                                        <Image
+                                            src={Github}
+                                            alt="Github"
+                                            className={`svg-beige h-[90%] w-[90%]`}
+                                        />
+                                        Github
+                                    </Link>
+                                )}
+                                {demoLink && (
+                                    <Link
+                                        href={demoLink}
+                                        className="flex h-[1.5rem] items-center gap-1 rounded-sm bg-blue p-1 text-[0.8rem] text-p text-beige">
+                                        <Image
+                                            src={Demo}
+                                            alt="Github"
+                                            className={`svg-beige h-[90%] w-[90%]`}
+                                        />
+                                        Demo
+                                    </Link>
+                                )}
                             </div>
-                            <p>{description}</p>
-                        </div>
+                        </hgroup>
                     </div>
                 )
             )}
@@ -55,7 +99,7 @@ const ProjectTab = ({ projectList }: ProjectTabProps) => {
 
 const SkillCapsule = ({ skill }: { skill: string }) => {
     return (
-        <div className="inline-flex items-center gap-1 rounded-full bg-beige-2 p-[0.15rem] px-2 text-[0.55rem] text-blue">
+        <li className="inline-flex items-center gap-1 rounded-full bg-beige-2 p-[0.15rem] px-2 text-[0.55rem] text-blue">
             <div className="flex h-[0.7rem] w-[0.7rem] items-center">
                 <Image
                     src={
@@ -67,7 +111,7 @@ const SkillCapsule = ({ skill }: { skill: string }) => {
                 />
             </div>
             <p>{skill}</p>
-        </div>
+        </li>
     );
 };
 

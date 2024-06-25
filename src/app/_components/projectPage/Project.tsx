@@ -7,37 +7,28 @@ const Project = () => {
     const data = [
         {
             projectImage: null,
-            skillList: ['typescript', 'nextjs', 'mongodb'],
+            skillList: ['typescript', 'next.js', 'mongodb'],
             description: 'Hi',
+            githubLink: 'https://react-icons.github.io/react-icons/icons/di/',
+            demoLink: null,
         },
         {
             projectImage: null,
-            skillList: ['typescript', 'nextjs', 'mongodb'],
+            skillList: ['typescript', 'next.js', 'mongodb'],
             description: 'Hi',
+            githubLink: null,
+            demoLink: 'https://react-icons.github.io/react-icons/icons/di/',
         },
         {
             projectImage: null,
-            skillList: ['typescript', 'nextjs', 'mongodb'],
+            skillList: ['typescript', 'next.js', 'mongodb'],
             description: 'Hi',
-        },
-        {
-            projectImage: null,
-            skillList: ['typescript', 'nextjs', 'mongodb'],
-            description: 'Hi',
-        },
-        {
-            projectImage: null,
-            skillList: ['typescript', 'nextjs', 'mongodb'],
-            description: 'Hi',
-        },
-        {
-            projectImage: null,
-            skillList: ['typescript', 'nextjs', 'mongodb'],
-            description: 'Hi',
+            githubLink: 'https://react-icons.github.io/react-icons/icons/di/',
+            demoLink: 'https://react-icons.github.io/react-icons/icons/di/',
         },
     ];
     return (
-        <div className="m-4 flex w-[90vw] max-w-[60rem] flex-col items-center justify-center">
+        <div className="m-4 flex w-[90vw] max-w-[60rem] flex-col items-center justify-center gap-3">
             <Title>My Recent Works</Title>
             <ProjectTab projectList={data} />
         </div>

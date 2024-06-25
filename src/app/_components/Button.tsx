@@ -1,59 +1,40 @@
 'use client';
 
-import { VariantProps, cva } from 'class-variance-authority';
-import React, { ButtonHTMLAttributes, PropsWithChildren } from 'react';
+import Image from 'next/image'; // Assuming you're using Next.js
+import NextLink from 'next/link'; // Import Next.js Link component
+import React from 'react';
 
-export type ButtonProps = PropsWithChildren<
-    ButtonHTMLAttributes<HTMLButtonElement>
-> &
-    VariantProps<typeof buttonVariants>;
+type CustomLinkProps = {
+    href: string;
+    color?: 'blue' | 'beige';
+    src: string;
+    alt: string;
+    className?: string;
+    children: React.ReactNode;
+};
 
-export default function Button({
+export default function CustomLink({
     children,
-    size = 'default',
-    look = 'default',
-    rounded = 'full',
-    onClick,
+    color = 'blue',
+    href,
+    src,
+    alt,
     className,
-    disabled,
-    type,
     ...rest
-}: ButtonProps) {
+}: CustomLinkProps) {
     return (
-        <button
-            disabled={disabled}
-            type={type}
-            onClick={onClick}
-            className={buttonVariants({ size, rounded, look, className })}
+        <NextLink
+            href={href}
+            className={`flex h-[1.5rem] items-center gap-1 rounded-sm bg-blue p-1 text-[0.8rem] text-p text-${color === 'beige' ? 'blue' : 'beige'} ${className || ''}`}
             {...rest}>
+            <Image
+                src={src}
+                alt={alt}
+                className={`svg-${color} h-[90%] w-[90%]`}
+                width={24} // Add appropriate width
+                height={24} // Add appropriate height
+            />
             {children}
-        </button>
+        </NextLink>
     );
 }
-
-const buttonVariants = cva('rounded-full border text-nowrap min-w-fit', {
-    variants: {
-        size: {
-            default: 'text-button px-btn-inline py-btn-block',
-            small: 'text-sm px-tag-inline py-tag-block',
-            xsmall: 'text-xs px-tag-inline-sm py-tag-block-sm rounded-lg',
-        },
-        look: {
-            default:
-                'text-white bg-black hover:text-black hover:border-black hover:bg-transparent',
-            outline:
-                'text-black bg-transparent border-black hover:text-white hover:bg-black',
-            'fill-gray':
-                'border-transparent bg-light text-dark hover:shadow-inner hover:border-gray',
-        },
-        rounded: {
-            full: 'rounded-full',
-            lg: 'rounded-lg',
-        },
-    },
-    defaultVariants: {
-        size: 'default',
-        look: 'default',
-        rounded: 'full',
-    },
-});

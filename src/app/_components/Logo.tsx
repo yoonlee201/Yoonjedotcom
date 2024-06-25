@@ -6,7 +6,7 @@ import LinkedIn from '~/public/linkedin.svg';
 import Github from '~/public/github.svg';
 import Instagram from '~/public/instagram.svg';
 import { HTMLAttributes } from 'react';
-import { VariantProps } from 'class-variance-authority';
+import Link from 'next/link';
 
 export const Logo = () => {
     return (
@@ -30,21 +30,27 @@ export const ConnectIcons = ({
         <div
             className={className}
             {...rest}>
-            <Image
-                src={LinkedIn}
-                alt="LinkedIn"
-                className={`svg-${color}`}
-            />
-            <Image
-                src={Github}
-                alt="Github"
-                className={`svg-${color}`}
-            />
-            <Image
-                src={Instagram}
-                alt="Instagram"
-                className={`svg-${color}`}
-            />
+            <Link href={'https://www.linkedin.com/in/yoonje-lee-0573a4214/'}>
+                <Image
+                    src={LinkedIn}
+                    alt="LinkedIn"
+                    className={`svg-${color}`}
+                />
+            </Link>
+            <Link href={'https://github.com/yoonlee201'}>
+                <Image
+                    src={Github}
+                    alt="Github"
+                    className={`svg-${color}`}
+                />
+            </Link>
+            <Link href={'https://www.instagram.com/while._.ylee/?hl=en'}>
+                <Image
+                    src={Instagram}
+                    alt="Instagram"
+                    className={`svg-${color}`}
+                />
+            </Link>
         </div>
     );
 };

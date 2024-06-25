@@ -1,0 +1,15 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <line x1="6" y1="30.1375" x2="93" y2="30.1375" stroke="black" stroke-width="5" />
+    <line x1="8.5" y1="18" x2="8.5" y2="84.5625" stroke="black" stroke-width="5" />
+    <line x1="91.5" y1="18" x2="91.5" y2="84.5625" stroke="black" stroke-width="5" />
+    <line x1="6" y1="82.5" x2="94" y2="82.5" stroke="black" stroke-width="5" />
+    <path d="M6 18C6 15.7909 7.79086 14 10 14H90C92.2091 14 94 15.7909 94 18V18H6V18Z" fill="black" />
+    <ellipse cx="17.3098" cy="23.7625" rx="1.74" ry="1.775" fill="black" />
+    <ellipse cx="23.4002" cy="23.7625" rx="1.74" ry="1.775" fill="black" />
+    <ellipse cx="29.49" cy="23.7625" rx="1.74" ry="1.775" fill="black" />
+    <line y1="-2" x2="35.2572" y2="-2"
+        transform="matrix(0.517218 -0.855854 0.767447 0.641113 39.0601 71.6875)" stroke="black"
+        stroke-width="4" />
+    <path d="M38.1899 46.8375L23.3999 54.3813L38.1899 61.925" stroke="black" stroke-width="4" />
+    <path d="M59.94 47.725L74.73 55.2687L59.94 62.8125" stroke="black" stroke-width="4" />
+</svg>
