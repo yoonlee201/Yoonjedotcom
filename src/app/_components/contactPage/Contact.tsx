@@ -1,10 +1,7 @@
 'use client';
 
 import { Title } from '@/app/_components/Title';
-import { ConnectIcons } from '@/app/_components/Logo';
-import Link from 'next/link';
-import Image from 'next/image';
-import { Button } from '../Button';
+import { Button } from '@/app/_components/Button';
 
 const Contact = () => {
     return (
@@ -32,7 +29,7 @@ const Contact = () => {
                         size="large"
                         label="Message"
                     />
-                    <Button className='w-[10rem] h-[3rem]' size={'h2'}>Send Message</Button>
+                    <Button size={'lg'}>Send Message</Button>
                 </fieldset>
             </form>
         </div>

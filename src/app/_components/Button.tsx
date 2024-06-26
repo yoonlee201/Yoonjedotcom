@@ -35,7 +35,7 @@ const buttonVariants = cva('flex items-center justify-center gap-1 ', {
     variants: {
         size: {
             xl: 'text-h1',
-            lg: 'text-h2',
+            lg: 'text-h3 w-[10rem] h-[3rem]',
             md: 'text-p h-[2rem] p-2',
             sm: 'text-[0.8rem] text-p h-[1.5rem] p-1',
         },

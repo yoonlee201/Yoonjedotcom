@@ -21,7 +21,7 @@ interface ProjectTabProps {
 
 const ProjectTab = ({ projectList }: ProjectTabProps) => {
     if (!projectList || projectList.length === 0) {
-        return <div>No projects to display</div>;
+        return <p className="text-h3 text-blue">No projects to display</p>;
     }
 
     return (

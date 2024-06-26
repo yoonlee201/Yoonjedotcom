@@ -4,19 +4,10 @@ import { Title } from '@/app/_components/Title';
 import { Button } from '@/app/_components/Button';
 import Download from '~/public/download.svg';
 import Image from 'next/image';
-import { PDFViewer } from '@react-pdf/renderer';
 
 
 const Resume = () => {
     const handelDownload = () => {
-        // const pdfUrl = './Lee_Yoonje_Resume.pdf';
-        // const link = document.createElement('a');
-        // link.href = pdfUrl;
-        // link.download = 'Lee_Yoonje_Resume.pdf'; // specify the filename
-        // document.body.appendChild(link);
-        // link.click();
-        // document.body.removeChild(link);
-
         fetch(
             'https://utfs.io/f/246d8b69-60a0-416e-821e-a637a97d6c9d-uo748n.pdf'
         ).then(response => {
