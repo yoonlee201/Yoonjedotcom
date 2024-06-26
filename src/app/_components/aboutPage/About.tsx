@@ -45,12 +45,12 @@ const About = () => {
                     <br />
                     <br />
                     Apart from coding, some other activities that I love to do!
-                    <ul>
-                        <li>crochet</li>
-                        <li>drawing</li>
-                        <li>cooking</li>
-                    </ul>
                 </p>
+                <ul>
+                    <li>crochet</li>
+                    <li>drawing</li>
+                    <li>cooking</li>
+                </ul>
             </section>
             <section className="flex flex-col items-center justify-center gap-8">
                 <Title>Professional Skillset</Title>
