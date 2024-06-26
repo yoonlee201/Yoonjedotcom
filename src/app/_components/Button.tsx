@@ -31,13 +31,13 @@ export function Button({
     );
 }
 
-const buttonVariants = cva('flex items-center justify-center gap-1 p-1', {
+const buttonVariants = cva('flex items-center justify-center gap-1 ', {
     variants: {
         size: {
-            h1: 'text-h1 pt-[3rem]',
-            h2: 'text-h2',
-            h3: 'text-h3',
-            sm: 'text-[0.8rem] text-p h-[1.5rem]',
+            xl: 'text-h1',
+            lg: 'text-h2',
+            md: 'text-p h-[2rem] p-2',
+            sm: 'text-[0.8rem] text-p h-[1.5rem] p-1',
         },
         bg: {
             blue: 'bg-blue text-beige',

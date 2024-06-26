@@ -30,7 +30,7 @@ export const ConnectIcons = ({
         <div
             className={className}
             {...rest}>
-            <Link href={'https://www.linkedin.com/in/yoonje-lee-0573a4214/'}>
+            <Link href={'https://www.linkedin.com/in/yoonje-lee/'}>
                 <Image
                     src={LinkedIn}
                     alt="LinkedIn"
