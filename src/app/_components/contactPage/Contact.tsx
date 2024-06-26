@@ -1,10 +1,12 @@
 'use client';
 
+import { ChangeEvent, useState, useTransition } from 'react';
 import { Title } from '@/app/_components/Title';
 import { Button } from '@/app/_components/Button';
-import { ChangeEvent, useState } from 'react';
+import { ConnectIcons } from '@/app/_components/Logo';
 
 const Contact = () => {
+    const [isPending, startTransition] = useTransition();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -25,11 +27,28 @@ const Contact = () => {
     const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
+        startTransition(async () => {
+            console.log('Email sent successfully!');
+            setFormData({
+                name: '',
+                email: '',
+                subject: '',
+                message: '',
+            });
+        });
     };
 
     return (
         <div className="m-4 flex w-[90vw] max-w-[35rem] flex-col items-center justify-center">
             <Title>Contact Me</Title>
+            <p className="flex flex-col items-center justify-center pt-[1rem] text-center text-p text-red">
+                this page is currently disabled <br />
+                please contact me through these applications:
+                <ConnectIcons
+                    className="flex gap-3"
+                    color="blue"
+                />
+            </p>
             <form
                 className="w-full pt-[2rem]"
                 onSubmit={sendEmail}>
@@ -68,6 +87,7 @@ const Contact = () => {
                     />
                     <Button
                         type="submit"
+                        disabled
                         size={'lg'}>
                         Send Message
                     </Button>
@@ -101,6 +121,7 @@ const Input = ({ label, type, size, name, value, onChange }: InputProps) => {
                     placeholder={label}
                     onChange={onChange}
                     value={value}
+                    disabled
                     className="h-[18rem] w-full rounded-sm border-2 border-beige-3 bg-beige-2 p-5 text-blue-2 placeholder:text-p placeholder:text-blue"
                     required
                 />
@@ -111,6 +132,7 @@ const Input = ({ label, type, size, name, value, onChange }: InputProps) => {
                     placeholder={label}
                     onChange={onChange}
                     value={value}
+                    disabled
                     className={`h-[4rem] w-full rounded-sm border-2 border-beige-3 bg-beige-2 p-5 text-blue-2 placeholder:text-p placeholder:text-blue`}
                     required
                 />
