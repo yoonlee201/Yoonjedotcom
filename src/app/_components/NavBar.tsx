@@ -61,6 +61,7 @@ const NavBar = () => {
                 <NavButton href="/about">ABOUT</NavButton>
                 <NavButton href="/project">PROJECT</NavButton>
                 <NavButton href="/resume">RESUME</NavButton>
+                <NavButton href="/contact">CONTACT</NavButton>
                 <button
                     ref={buttonRef}
                     type="button"
@@ -119,11 +120,18 @@ const Dropdown = forwardRef<HTMLDivElement, {}>(function ({}, ref) {
                         Project
                     </Link>
                 </li>
-                <li className="px-4 py-3 text-navlink hover:bg-blue-2">
+                <li className="border-blue-2 px-4 border-b-2 py-3 text-navlink hover:bg-blue-2">
                     <Link
                         href="/resume"
                         className="block h-full w-full">
                         Resume
+                    </Link>
+                </li>
+                <li className="px-4 py-3 text-navlink hover:bg-blue-2">
+                    <Link
+                        href="/contact"
+                        className="block h-full w-full">
+                        Contact
                     </Link>
                 </li>
             </ul>

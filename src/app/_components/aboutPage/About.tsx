@@ -30,14 +30,14 @@ const About = () => {
                     className="flex gap-3"
                     color="blue"
                 />
-                <Link
-                    href="/project"
-                    className="text-p text-blue">
+                <p className="text-p text-blue">
                     or contact me{' '}
-                    <strong className="hover:text-red text-blue-2 underline">
-                        here
-                    </strong>
-                </Link>
+                    <Link href="/contact">
+                        <strong className="text-blue-2 underline hover:text-red">
+                            here
+                        </strong>
+                    </Link>
+                </p>
             </div>
         </div>
     );

@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Node from '~/public/devicons/nodejs.svg';
 import { skills } from '~/src/constants/skills';
 import { Title } from '@/app/_components/Title';
+import { Button } from '@/app/_components/Button';
 import Link from 'next/link';
 import Github from '~/public/github.svg';
 import Demo from '~/public/demo.svg';
@@ -65,27 +66,27 @@ const ProjectTab = ({ projectList }: ProjectTabProps) => {
                             </header>
                             <div className="inline-flex gap-2">
                                 {githubLink && (
-                                    <Link
-                                        href={githubLink}
-                                        className="flex h-[1.5rem] items-center gap-1 rounded-sm bg-blue p-1 text-[0.8rem] text-p text-beige">
-                                        <Image
-                                            src={Github}
-                                            alt="Github"
-                                            className={`svg-beige h-[90%] w-[90%]`}
-                                        />
-                                        Github
+                                    <Link href={githubLink}>
+                                        <Button>
+                                            <Image
+                                                src={Github}
+                                                alt="Github"
+                                                className={`svg-beige h-[90%] w-[90%]`}
+                                            />
+                                            Github
+                                        </Button>
                                     </Link>
                                 )}
                                 {demoLink && (
-                                    <Link
-                                        href={demoLink}
-                                        className="flex h-[1.5rem] items-center gap-1 rounded-sm bg-blue p-1 text-[0.8rem] text-p text-beige">
-                                        <Image
-                                            src={Demo}
-                                            alt="Github"
-                                            className={`svg-beige h-[90%] w-[90%]`}
-                                        />
-                                        Demo
+                                    <Link href={demoLink}>
+                                        <Button>
+                                            <Image
+                                                src={Demo}
+                                                alt="Github"
+                                                className={`svg-beige h-[90%] w-[90%]`}
+                                            />
+                                            Demo
+                                        </Button>
                                     </Link>
                                 )}
                             </div>

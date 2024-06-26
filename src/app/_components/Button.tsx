@@ -1,40 +1,59 @@
 'use client';
 
-import Image from 'next/image'; // Assuming you're using Next.js
-import NextLink from 'next/link'; // Import Next.js Link component
-import React from 'react';
+import { VariantProps, cva } from 'class-variance-authority';
+import React, { ButtonHTMLAttributes, PropsWithChildren } from 'react';
 
-type CustomLinkProps = {
-    href: string;
-    color?: 'blue' | 'beige';
-    src: string;
-    alt: string;
-    className?: string;
-    children: React.ReactNode;
-};
+export type ButtonProps = PropsWithChildren<
+    ButtonHTMLAttributes<HTMLButtonElement>
+> &
+    VariantProps<typeof buttonVariants>;
 
-export default function CustomLink({
+export function Button({
     children,
-    color = 'blue',
-    href,
-    src,
-    alt,
+    onClick,
+    bg = 'blue',
+    size = 'sm',
+    rounded = 'sm',
     className,
+    disabled,
+    type,
     ...rest
-}: CustomLinkProps) {
+}: ButtonProps) {
     return (
-        <NextLink
-            href={href}
-            className={`flex h-[1.5rem] items-center gap-1 rounded-sm bg-blue p-1 text-[0.8rem] text-p text-${color === 'beige' ? 'blue' : 'beige'} ${className || ''}`}
+        <button
+            disabled={disabled}
+            type={type}
+            onClick={onClick}
+            className={buttonVariants({ bg, size, rounded, className })}
             {...rest}>
-            <Image
-                src={src}
-                alt={alt}
-                className={`svg-${color} h-[90%] w-[90%]`}
-                width={24} // Add appropriate width
-                height={24} // Add appropriate height
-            />
             {children}
-        </NextLink>
+        </button>
     );
 }
+
+const buttonVariants = cva('flex items-center justify-center gap-1 p-1', {
+    variants: {
+        size: {
+            h1: 'text-h1 pt-[3rem]',
+            h2: 'text-h2',
+            h3: 'text-h3',
+            sm: 'text-[0.8rem] text-p h-[1.5rem]',
+        },
+        bg: {
+            blue: 'bg-blue text-beige',
+            'blue-2': 'bg-blue-2 text-beige',
+            beige: 'bg-beige text-blue',
+        },
+        rounded: {
+            full: 'rounded-full',
+            lg: 'rounded-lg',
+            md: 'rounded-md',
+            sm: 'rounded-sm',
+        },
+    },
+    defaultVariants: {
+        size: 'sm',
+        bg: 'blue',
+        rounded: 'sm',
+    },
+});
