@@ -68,7 +68,7 @@ const NavBar = () => {
                     className="mr-9 md:hidden"
                     onClick={toggleDropdown}>
                     <Image
-                    className='svg-beige'
+                        className="svg-beige h-[1.5rem] w-[1.5rem]"
                         src={MenuIcon}
                         alt="navigation menu"
                         width={25}

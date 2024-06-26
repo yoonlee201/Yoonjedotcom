@@ -6,15 +6,9 @@ import { Button } from '@/app/_components/Button';
 import Download from '~/public/download.svg';
 import Image from 'next/image';
 import Link from 'next/link';
-import pdf from '@/assets/Lee_Yoonje_Resume.pdf'
+import pdf from '@/assets/Lee_Yoonje_Resume.pdf';
 
 const Resume = () => {
-    const [width, setWidth] = useState(1200);
-
-    useEffect(() => {
-        setWidth(window.innerWidth);
-    }, []);
-
     return (
         <div className="m-4 flex w-[90vw] max-w-[60rem] flex-col items-center justify-center gap-3">
             <Title>Resume/CV</Title>
@@ -32,6 +26,12 @@ const Resume = () => {
                     Download
                 </Button>
             </Link>
+            <iframe
+                src={
+                    'https://utfs.io/f/246d8b69-60a0-416e-821e-a637a97d6c9d-uo748n.pdf#toolbar=0'
+                }
+                className="lg:[800px] h-[500px] w-full md:h-[700px]"
+            />
         </div>
     );
 };

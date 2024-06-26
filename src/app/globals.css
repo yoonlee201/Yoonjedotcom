@@ -41,21 +41,3 @@ body {
     filter: brightness(0) saturate(100%) invert(57%) sepia(11%) saturate(371%)
         hue-rotate(188deg) brightness(94%) contrast(87%);
 }
-
-/* input[type='text'] {
-  display: flex;
-  justify-content: start;
-  align-items: start;
-  text-align: start;
-
-
-}
-input[type='text']::placeholder {
-  /* text-align: left; 
-  
-}
-input[type='text']:-ms-input-placeholder {
-}
-input[type='text']::-ms-input-placeholder {
-} */
-/* @import url('https://fonts.googleapis.com/css2?family=Krub:wght@300;400;500;600;700&display=swap'); */
