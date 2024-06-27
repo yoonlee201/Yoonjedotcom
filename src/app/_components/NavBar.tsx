@@ -10,7 +10,7 @@ import React, {
 import Image from 'next/image';
 import Link from 'next/link';
 import { Logo } from '@/app/_components/Logo';
-import MenuIcon from '~/public/menu.svg';
+import MenuIcon from '~/public/icons/menu.svg';
 
 const NavBar = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);

@@ -41,14 +41,14 @@ const Contact = () => {
     return (
         <div className="m-4 flex w-[90vw] max-w-[35rem] flex-col items-center justify-center">
             <Title>Contact Me</Title>
-            <p className="flex flex-col items-center justify-center pt-[1rem] text-center text-p text-red">
+            <div className="flex flex-col items-center justify-center pt-[1rem] text-center text-p text-red">
                 this page is currently disabled <br />
                 please contact me through these applications:
                 <ConnectIcons
                     className="flex gap-3"
                     color="blue"
                 />
-            </p>
+            </div>
             <form
                 className="w-full pt-[2rem]"
                 onSubmit={sendEmail}>

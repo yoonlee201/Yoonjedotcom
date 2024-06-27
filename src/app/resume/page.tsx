@@ -1,15 +1,19 @@
 import Resume from "@/app/_components/resumePage/Resume";
+import { Metadata } from 'next';
 
-export const route = '/resume';
+// export const route = '/resume';
+export const metadata: Metadata = {
+    title: 'Resume Page',
+    description: 'Check my resume',
+};
 
-const Page = () => {
+export default async function Page() {
     return (
         <main className="mb-[0rem] lg:mb-0">
             <section className="flex justify-center overflow-y-auto pb-0 pt-root-top-md lg:pb-[3.5rem] lg:pt-root-top">
-                <Resume/>
+                <Resume />
             </section>
         </main>
     );
 };
 
-export default Page;

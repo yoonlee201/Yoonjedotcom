@@ -6,8 +6,8 @@ import { skills } from '~/src/constants/skills';
 import { Title } from '@/app/_components/Title';
 import { Button } from '@/app/_components/Button';
 import Link from 'next/link';
-import Github from '~/public/github.svg';
-import Demo from '~/public/demo.svg';
+import Github from '~/public/icons/github.svg';
+import Demo from '~/public/icons/demo.svg';
 
 interface ProjectTabProps {
     projectList: {

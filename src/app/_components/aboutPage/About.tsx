@@ -7,7 +7,7 @@ import Skillset from '@/app/_components/aboutPage/Skillset';
 import Introduction from '@/app/_components/aboutPage/Introduction';
 import { Title } from '@/app/_components/Title';
 import { ConnectIcons } from '@/app/_components/Logo';
-import Frame from '~/public/imageFrame.svg';
+import ProfileImage from '~/public/images/IMG_9617.JPG';
 
 const About = () => {
     return (
@@ -16,9 +16,12 @@ const About = () => {
                 <Title className="w-full pl-[1rem]">About Me</Title>
                 <div className="flex flex-col items-center gap-9 md:flex-row-reverse md:items-end">
                     <Image
-                        className="svg-blue w-[15.625rem]"
-                        src={Frame}
-                        alt="my-image"
+                        className="w-[15.625rem]"
+                        src={ProfileImage}
+                        alt="Profile"
+                        width={500}
+                        height={500}
+                        priority
                     />
                     <AboutCell />
                 </div>

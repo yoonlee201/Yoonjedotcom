@@ -4,9 +4,11 @@ import React from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 import { skills } from '@/constants/skills';
 import Image from 'next/image';
-import { Title } from '../Title';
+import { Title } from '@/app/_components/Title';
 
 const COLORS = ['hsl(230, 11%, 57%)', 'hsl(0, 7%, 83%)'];
+
+export const dynamic = 'force-dynamic';
 
 const Skillset: React.FC = () => {
     const data = skills.map(skill => [
@@ -46,11 +48,12 @@ const Skillset: React.FC = () => {
                         </ResponsiveContainer>
                         <div className="absolute inset-0 flex items-center justify-center">
                             <Image
-                                className="h-[35%] w-[35%]"
                                 width={50}
                                 height={50}
+                                loading="lazy"
                                 src={skills[i].icon}
                                 alt={skills[i].name}
+                                // priority/
                             />
                         </div>
                     </div>

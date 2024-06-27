@@ -1,10 +1,10 @@
 'use client';
 
 import Image from 'next/image';
-import YoonjeLogo from '~/public/YoonjeLogo.svg';
-import LinkedIn from '~/public/linkedin.svg';
-import Github from '~/public/github.svg';
-import Instagram from '~/public/instagram.svg';
+import YoonjeLogo from '~/public/images/YoonjeLogo.svg';
+import LinkedIn from '~/public/icons/linkedin.svg';
+import Github from '~/public/icons/github.svg';
+import Instagram from '~/public/icons/instagram.svg';
 import { HTMLAttributes } from 'react';
 import Link from 'next/link';
 
