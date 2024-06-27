@@ -1,11 +1,12 @@
 'use client';
 
-import AboutCell from '@/app/_components/aboutPage/AboutCell';
-import Skillset from '@/app/_components/aboutPage/Skillset';
-import { Title } from '@/app/_components/Title';
-import { ConnectIcons } from '@/app/_components/Logo';
 import Link from 'next/link';
 import Image from 'next/image';
+import AboutCell from '@/app/_components/aboutPage/AboutCell';
+import Skillset from '@/app/_components/aboutPage/Skillset';
+import Introduction from '@/app/_components/aboutPage/Introduction';
+import { Title } from '@/app/_components/Title';
+import { ConnectIcons } from '@/app/_components/Logo';
 import Frame from '~/public/imageFrame.svg';
 
 const About = () => {
@@ -23,34 +24,7 @@ const About = () => {
                 </div>
             </section>
             <section className="flex flex-col items-center justify-center gap-8">
-                <Title>Let Me Introduce Myself</Title>
-                <p className="w-[90%] text-[1.2rem] text-p text-blue">
-                    Hello! I'm Yoonje Lee, a passionate programmer with a deep
-                    love for technology and innovation. My journey in
-                    programming has been an exciting adventure, filled with
-                    countless learning experiences and growth.
-                    <br />
-                    <br />
-                    I'm proficient in classic programming languages such as C++,
-                    JavaScript, and Go. My interests lie in building
-                    cutting-edge web technologies and products, with a
-                    particular focus on the exciting field of Blockchain.
-                    <br />
-                    <br />
-                    I also channel my enthusiasm for development into creating
-                    products using Node.js, and modern JavaScript libraries and
-                    frameworks like React.js and Next.js. Whenever I get the
-                    chance, I immerse myself in these technologies to craft
-                    robust and scalable solutions.
-                    <br />
-                    <br />
-                    Apart from coding, some other activities that I love to do!
-                </p>
-                <ul>
-                    <li>crochet</li>
-                    <li>drawing</li>
-                    <li>cooking</li>
-                </ul>
+                <Introduction />
             </section>
             <section className="flex flex-col items-center justify-center gap-8">
                 <Title>Professional Skillset</Title>

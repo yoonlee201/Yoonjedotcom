@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Title } from '@/app/_components/Title';
 import { Button } from '@/app/_components/Button';
 import Download from '~/public/download.svg';

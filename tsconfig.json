@@ -32,6 +32,6 @@
         "**/*.mjs",
         "../routes.ts",
         "src/types/global.d.ts"
-    ],
+, "src/app/_components/homePage/Name.tsx"    ],
     "exclude": ["node_modules"]
 }
