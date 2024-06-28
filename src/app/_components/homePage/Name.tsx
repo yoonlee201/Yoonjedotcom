@@ -2,7 +2,7 @@
 //to be continue
 import { lazy, Suspense } from 'react';
 import { Canvas} from '@react-three/fiber';
-import Yoonje from '~/public/Yoonje_.glb';
+import Yoonje from '~/public/Yoonje.glb';
 import {
     useSceneColors,
     SunLight,
