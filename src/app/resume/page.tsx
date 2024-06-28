@@ -3,8 +3,11 @@ import { Metadata } from 'next';
 
 // export const route = '/resume';
 export const metadata: Metadata = {
-    title: 'Resume Page',
+    title: 'Resume',
     description: 'Check my resume',
+    icons: {
+        icon: '~/public/images/favicon.ico',
+    },
 };
 
 export default async function Page() {

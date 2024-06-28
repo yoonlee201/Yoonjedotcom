@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 
 // export const route = '/contactme';
 export const metadata: Metadata = {
-    title: 'Contact Page',
+    title: 'Contact',
     description: 'Contact me!',
 };
 

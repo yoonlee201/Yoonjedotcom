@@ -3,8 +3,11 @@ import { Metadata } from 'next';
 
 // export const route = '/project';
 export const metadata: Metadata = {
-    title: 'Project Page',
+    title: 'Project',
     description: 'Checkout my projects!',
+    icons: {
+        icon: '/images/favicon.ico',
+    },
 };
 
 export default async function Page() {

@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 // export const route = '/about';
 
 export const metadata: Metadata = {
-    title: 'About Page',
+    title: 'About',
     description: 'Learn more about Yoonje Lee',
 };
 
