@@ -1,13 +1,9 @@
 import Resume from "@/app/_components/resumePage/Resume";
 import { Metadata } from 'next';
 
-// export const route = '/resume';
 export const metadata: Metadata = {
     title: 'Resume',
-    description: 'Check my resume',
-    icons: {
-        icon: '~/public/images/favicon.ico',
-    },
+    description: 'Check my resume'
 };
 
 export default async function Page() {
