@@ -44,6 +44,7 @@ export default function RootLayout({
                         sizes="16x16"
                         href="/images/favicon-16x16.png"
                     />
+                    <link rel="shortcut icon" href="#"/>
             </head>
             <body className="flex min-h-screen flex-col bg-beige">
                 <NavBar />
