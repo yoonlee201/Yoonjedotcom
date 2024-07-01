@@ -5,12 +5,36 @@ import { useEffect, useRef } from 'react';
 import { useSceneColors } from '@/app/_components/homePage/3DComponents';
 import * as THREE from 'three';
 import Yoonje from '~/public/Yoonje.glb';
+const modelPath =
+    process.env.NODE_ENV === 'production'
+        ? `/Yoonjedotcom/Yoonje.glb`
+        : '/Yoonje.glb';
 
 const Model = () => {
-    const { scene } = useGLTF('/Yoonje.glb');
+    const { scene } = useGLTF(modelPath);
     const modelRef = useRef();
     const { camera } = useThree();
     const { modelColor } = useSceneColors();
+
+    useEffect(() => {
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        // Handle context loss
+        renderer.domElement.addEventListener(
+            'webglcontextlost',
+            event => {
+                event.preventDefault();
+                console.log(
+                    'WebGL context lost. You should probably reload the page.'
+                );
+            },
+            false
+        );
+
+        // ... rest of your Three.js setup
+    }, []);
 
     useEffect(() => {
         const model = modelRef.current;

@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
-    basePath: '/Yoonjedotcom',
+    assetPrefix: process.env.NODE_ENV === 'production' ? '/Yoonjedotcom' : '',
+    basePath: process.env.NODE_ENV === 'production' ? '/Yoonjedotcome' : '',
     images: {
         unoptimized: true,
     },
