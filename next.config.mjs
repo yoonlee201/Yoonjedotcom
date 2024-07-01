@@ -1,31 +1,34 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
-    webpack(config) {
-        config.module.rules.push({
-            test: /\.pdf$/,
-            use: [
-                {
+    images: {
+        unoptimized: true,
+    },
+    webpack: config => {
+        config.module.rules.push(
+            {
+                test: /\.(glb|gltf)$/,
+                use: {
                     loader: 'file-loader',
                     options: {
-                        name: '[name].[ext]',
-                        publicPath: '/_next/static/files',
-                        outputPath: 'static/files',
+                        name: '[name].[hash].[ext]',
+                        outputPath: 'static/models/',
+                        publicPath: '/_next/static/models/',
                     },
                 },
-            ],
-        });
-        config.module.rules.push({
-            test: /\.(glb|gltf)$/,
-            use: {
-                loader: 'file-loader',
-                options: {
-                    publicPath: '/_next/static/',
-                    outputPath: 'static/',
-                    name: '[name].[hash].[ext]',
-                },
             },
-        });
+            {
+                test: /\.pdf$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[hash].[ext]',
+                        outputPath: 'static/files/',
+                        publicPath: '/_next/static/files/',
+                    },
+                },
+            }
+        );
         return config;
     },
 };

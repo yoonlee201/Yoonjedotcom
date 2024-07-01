@@ -4,9 +4,10 @@ import { useGLTF } from '@react-three/drei';
 import { useEffect, useRef } from 'react';
 import { useSceneColors } from '@/app/_components/homePage/3DComponents';
 import * as THREE from 'three';
+import Yoonje from '~/public/Yoonje.glb';
 
-const Model = ({ url }: { url: string }) => {
-    const { scene } = useGLTF(url);
+const Model = () => {
+    const { scene } = useGLTF('/Yoonje.glb');
     const modelRef = useRef();
     const { camera } = useThree();
     const { modelColor } = useSceneColors();

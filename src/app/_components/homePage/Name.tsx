@@ -2,7 +2,6 @@
 //to be continue
 import { lazy, Suspense } from 'react';
 import { Canvas} from '@react-three/fiber';
-import Yoonje from '~/public/Yoonje.glb';
 import {
     useSceneColors,
     SunLight,
@@ -30,7 +29,7 @@ const Name = () => {
                 <ambientLight intensity={0.5} />
                 <SunLight />
                 <BackgroundPlane />
-                <ModelComponent url={Yoonje} />
+                <ModelComponent/>
                 <RestrictedOrbitControls />
             </Canvas>
         </Suspense>
