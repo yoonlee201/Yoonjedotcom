@@ -2,7 +2,6 @@
 const nextConfig = {
     output: 'export',
     basePath: '/Yoonjedotcom',
-    assetPrefix: '/Yoonjedotcom/',
     images: {
         unoptimized: true,
     },
