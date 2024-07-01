@@ -4,10 +4,11 @@
     "private": true,
     "scripts": {
         "dev": "next dev",
-        "build": "next build && next export",
+        "build": "next build",
         "start": "next start",
-        "lint": "next lint",
-        "deploy": "npm run build && npm run export && touch ./out/.nojekyll && gh-pages -d out -t true"
+        "export": "next export",
+        "static": "next build && next export && touch ./out/.nojekyll && echo 'www.yoonlee201.github.io/Yoonjedotcom/' > ./out/CNAME",
+        "deploy": "gh-pages -d out -t true"
     },
     "dependencies": {
         "@fontsource/krona-one": "^5.0.13",
