@@ -4,10 +4,10 @@ import { useGLTF } from '@react-three/drei';
 import { useEffect, useRef } from 'react';
 import { useSceneColors } from '@/app/_components/homePage/3DComponents';
 import * as THREE from 'three';
-import Yoonje from '~/public/Yoonje.glb';
+import Yoonje from '../../../../public/Yoonje.glb';
 
 const Model = () => {
-    const { scene } = useGLTF('https://rawcdn.githack.com/mrdoob/three.js/7249d12dac2907dac95d36227d62c5415af51845/examples/models/gltf/Flamingo.glb');
+    const { scene } = useGLTF(Yoonje);
     const modelRef = useRef();
     const { camera } = useThree();
     const { modelColor } = useSceneColors();
