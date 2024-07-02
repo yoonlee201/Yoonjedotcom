@@ -28,7 +28,7 @@ const Name = () => {
                 />
                 <ambientLight intensity={0.5} />
                 <SunLight />
-                <BackgroundPlane />
+                {/* <BackgroundPlane /> */}
                 <ModelComponent/>
                 <RestrictedOrbitControls />
             </Canvas>
