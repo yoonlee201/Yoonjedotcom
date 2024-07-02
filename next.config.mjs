@@ -2,7 +2,7 @@
 const nextConfig = {
     output: 'export',
     assetPrefix: process.env.NODE_ENV === 'production' ? '/Yoonjedotcom' : '',
-    basePath: process.env.NODE_ENV === 'production' ? '/Yoonjedotcome' : '',
+    basePath: process.env.NODE_ENV === 'production' ? '/Yoonjedotcom' : '',
     images: {
         unoptimized: true,
     },
