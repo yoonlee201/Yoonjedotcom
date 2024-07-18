@@ -4,7 +4,7 @@ import { useGLTF } from '@react-three/drei';
 import { useEffect, useRef } from 'react';
 import { useSceneColors } from '@/app/_components/homePage/3DComponents';
 import * as THREE from 'three';
-import Yoonje from '~/public/models/Yoonje.glb'
+import Yoonje from 'public/models/Yoonje.glb'
 
 const Model = () => {
     const { scene } = useGLTF(Yoonje);
