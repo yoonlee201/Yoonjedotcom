@@ -61,4 +61,6 @@ const Model = () => {
     );
 };
 
+useGLTF.preload(Yoonje);
+
 export default Model;

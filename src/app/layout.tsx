@@ -8,9 +8,6 @@ export const metadata: Metadata = {
         template: '%s | Yoonje',
         default: 'Yoonje',
     },
-    icons: {
-        icon: '/images/favicon.ico',
-    },
 };
 
 export default function RootLayout({
