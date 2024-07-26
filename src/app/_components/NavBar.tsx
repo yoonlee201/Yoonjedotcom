@@ -50,9 +50,7 @@ const NavBar = () => {
 
     return (
         <nav
-            className={`fixed left-0 top-0 z-50 flex min-h-[3.75rem] w-full items-center justify-between gap-5
-                     bg-blue font-krona-one text-beige 
-                     md:min-h-[4.3rem] md:justify-start lg:min-h-[4.7rem]`}>
+            className={`fixed left-0 top-0 z-50 flex min-h-[3.75rem] w-full items-center justify-between gap-5 bg-blue font-krona-one text-beige md:min-h-[4.3rem] md:justify-start lg:min-h-[4.7rem]`}>
             <div className="ml-9">
                 <Link
                     title="Yoonje Lee"
@@ -91,12 +89,10 @@ type NavButtonProps = {
 
 const NavButton = ({ children, href }: NavButtonProps) => {
     return (
-        <Link href={href as string}>
-            <button
-                type="button"
-                className="hidden text-navlink hover:border-b-md hover:border-beige md:block">
-                {children}
-            </button>
+        <Link
+            href={href ?? '/'}
+            className="hidden text-navlink hover:border-b-md hover:border-beige md:block">
+            {children}
         </Link>
     );
 };

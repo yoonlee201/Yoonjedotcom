@@ -31,6 +31,9 @@ const config = {
         },
 
         extend: {
+            screens: {
+              xs:'360px'  
+            },
             fontSize: {
                 h1: [
                     '1.25rem',

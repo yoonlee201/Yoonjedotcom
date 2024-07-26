@@ -16,7 +16,7 @@ import { Button } from '@/app/_components/Button';
 
 interface ProjectDescriptionProps {
     title: string;
-    projectImage: StaticImageData
+    projectImage: StaticImageData;
     skillList: string[];
     description: string;
     githubLink: string | null;
@@ -75,7 +75,7 @@ const ProjectDescription = ({
         <div
             key={index}
             className="mt-3 flex flex-col items-center rounded-lg border-4 border-blue p-5 sm:w-[80%] sm:flex-row">
-            <div className="relative h-[12.897rem] w-[100%] sm:min-w-[15.625rem]">
+            <div className="relative h-[12.897rem] w-full sm:min-w-[13rem] md:min-w-[15.625rem]">
                 <Image
                     className="rounded-md border-sm border-blue object-cover"
                     src={projectImage ?? '/images/programming-screen.jpg'}
@@ -84,7 +84,7 @@ const ProjectDescription = ({
                     sizes="15.625rem"
                 />
             </div>
-            <hgroup className="inline-flex flex-col justify-between gap-1 sm:pl-[1.3rem] pt-[1rem] md:pt-0">
+            <hgroup className="inline-flex flex-col justify-between gap-1 pt-[1rem] sm:pl-[1.3rem] md:pt-0">
                 <header className="flex flex-col gap-1">
                     <Title size={'h2'}>{title}</Title>
                     <ul className="flex flex-wrap gap-1">
@@ -101,10 +101,10 @@ const ProjectDescription = ({
                     </p>
                 </header>
                 <div className="flex items-center justify-between text-center">
-                    <div className="inline-flex gap-2">
+                    <div className="mr-auto flex gap-2">
                         {githubLink && (
                             <Link href={githubLink}>
-                                <Button>
+                                <Button >
                                     <Image
                                         src={Github}
                                         alt="Github"
@@ -131,8 +131,10 @@ const ProjectDescription = ({
                         onClick={() => {
                             setReadMore(!readMore);
                         }}
-                        className="text-p text-blue underline underline-offset-2 hover:text-red">
-                        read {readMore ? 'less' : 'more'}{' '}
+                        className="flex items-center gap-1 text-blue underline underline-offset-2 hover:text-red">
+                        <p className="block text-[0.8rem] hidden xs:block sm:hidden md:block">
+                            read {readMore ? 'less' : 'more'}
+                        </p>
                         <FontAwesomeIcon
                             size="2xs"
                             icon={readMore ? faChevronUp : faChevronDown}
