@@ -3,9 +3,9 @@
 import React from 'react';
 import { Title } from '@/app/_components/Title';
 import { Button } from '@/app/_components/Button';
-import Download from '~/public/icons/download.svg';
-import Image from 'next/image';
 import pdf from '~/public/files/Lee_Yoonje_Resume.pdf';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Resume = () => {
     const handelDownload = () => {
@@ -23,11 +23,7 @@ const Resume = () => {
                 size={'md'}
                 onClick={handelDownload}
                 className="">
-                <Image
-                    src={Download}
-                    alt="Download"
-                    className={`svg-beige h-[110%] w-[110%]`}
-                />
+                <FontAwesomeIcon icon={faDownload} />
                 Download
             </Button>
             <iframe
