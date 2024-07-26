@@ -19,7 +19,7 @@ export default function RootLayout({
         <html
             lang="en"
             className="h-full">
-            <head>
+            {/* <head>
                     <link
                         rel="shortcut icon"
                         href="/images/favicon.ico"
@@ -42,7 +42,7 @@ export default function RootLayout({
                         href="/images/favicon-16x16.png"
                     />
                     <link rel="shortcut icon" href="#"/>
-            </head>
+            </head> */}
             <body className="flex min-h-screen flex-col bg-beige">
                 <NavBar />
                 <div className="flex-grow">{children}</div>

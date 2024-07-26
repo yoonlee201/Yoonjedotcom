@@ -15,7 +15,7 @@ const nextConfig = {
                     options: {
                         name: '[name].[hash].[ext]',
                         outputPath: 'static/models/',
-                        publicPath: '/_next/static/models/',
+                        publicPath: '/Yoonjedotcom/_next/static/models/',
                     },
                 },
             },
@@ -26,7 +26,7 @@ const nextConfig = {
                     options: {
                         name: '[name].[hash].[ext]',
                         outputPath: 'static/files/',
-                        publicPath: '/_next/static/files/',
+                        publicPath: '/Yoonjedotcom/_next/static/files/',
                     },
                 },
             }

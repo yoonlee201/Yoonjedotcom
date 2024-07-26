@@ -54,7 +54,7 @@ export const SunLight = () => {
 export const useSceneColors = () => {
     return {
         modelColor: '#85899d', //#425c8d', //85899d
-        backgroundColor: '#ffeccc', //fbf6ea})
+        backgroundColor: '#fbf6ea', //'#ffeccc', //fbf6ea})
     };
 };
 export const BackgroundPlane = () => {
