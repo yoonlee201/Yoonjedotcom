@@ -49,34 +49,36 @@ const NavBar = () => {
     }, []);
 
     return (
-        <nav className="fixed left-0 top-0 z-50 w-full bg-blue font-krona-one">
-            <div className="flex min-h-[3.75rem] w-full items-center justify-between gap-9 bg-blue text-beige md:min-h-[4.3rem] md:justify-start lg:min-h-[4.7rem]">
-                <div className="ml-9">
-                    <Link
-                        title="Yoonje Lee"
-                        href={'/'}>
-                        <Logo />
-                    </Link>
-                </div>
-                <NavButton href="/about">ABOUT</NavButton>
-                <NavButton href="/project">PROJECT</NavButton>
-                <NavButton href="/resume">RESUME</NavButton>
-                <NavButton href="/contact">CONTACT</NavButton>
-                <button
-                    ref={buttonRef}
-                    type="button"
-                    className="mr-9 md:hidden"
-                    onClick={toggleDropdown}>
-                    <Image
-                        className="svg-beige h-[1.5rem] w-[1.5rem]"
-                        src={MenuIcon}
-                        alt="navigation menu"
-                        width={25}
-                        height={25}
-                    />
-                </button>
-                {isDropdownOpen && <Dropdown ref={menuRef} />}
+        <nav
+            className={`fixed left-0 top-0 z-50 flex min-h-[3.75rem] w-full items-center justify-between gap-5
+                     bg-blue font-krona-one text-beige 
+                     md:min-h-[4.3rem] md:justify-start lg:min-h-[4.7rem]`}>
+            <div className="ml-9">
+                <Link
+                    title="Yoonje Lee"
+                    href={'/'}>
+                    <Logo />
+                </Link>
             </div>
+            <NavButton href="/about">ABOUT</NavButton>
+            <NavButton href="/project">PROJECT</NavButton>
+            <NavButton href="/resume">RESUME</NavButton>
+            <NavButton href="/contact">CONTACT</NavButton>
+            <button
+                ref={buttonRef}
+                type="button"
+                className="mr-9 md:hidden"
+                onClick={toggleDropdown}>
+                <Image
+                    className="svg-beige h-[1.5rem] w-[1.5rem]"
+                    src={MenuIcon}
+                    alt="navigation menu"
+                    width={25}
+                    height={25}
+                />
+            </button>
+            {isDropdownOpen && <Dropdown ref={menuRef} />}
+            {/* </div> */}
         </nav>
     );
 };
@@ -120,7 +122,7 @@ const Dropdown = forwardRef<HTMLDivElement, {}>(function ({}, ref) {
                         Project
                     </Link>
                 </li>
-                <li className="border-blue-2 px-4 border-b-2 py-3 text-navlink hover:bg-blue-2">
+                <li className="border-b-2 border-blue-2 px-4 py-3 text-navlink hover:bg-blue-2">
                     <Link
                         href="/resume"
                         className="block h-full w-full">

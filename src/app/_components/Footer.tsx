@@ -5,8 +5,8 @@ import { ConnectIcons } from '@/app/_components/Logo';
 
 const Footer = () => {
     return (
-        <footer className="z-50 mt-auto w-full bg-blue font-korna-one">
-            <div className="flex min-h-[3.75rem] w-full flex-col items-start justify-center gap-3 bg-blue px-9 py-4 text-beige md:min-h-[4.3rem] md:flex-row md:items-center md:justify-between lg:min-h-[4.7rem]">
+        <footer className="font-korna-one z-50 mt-auto w-full bg-blue">
+            <div className="flex min-h-[8.7rem] w-full flex-col items-start justify-center gap-3 bg-blue px-9 py-4 text-beige md:min-h-[4.3rem] md:flex-row md:items-center md:justify-between lg:min-h-[4.7rem]">
                 <h2 className="rounded-full border-md border-beige px-[1rem] text-h2">
                     08022024
                 </h2>

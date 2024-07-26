@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
@@ -16,7 +16,7 @@ import { Button } from '@/app/_components/Button';
 
 interface ProjectDescriptionProps {
     title: string;
-    projectImage: string | null;
+    projectImage: StaticImageData
     skillList: string[];
     description: string;
     githubLink: string | null;
@@ -77,14 +77,14 @@ const ProjectDescription = ({
             className="mt-3 flex flex-col items-center rounded-lg border-4 border-blue p-5 sm:w-[80%] sm:flex-row">
             <div className="relative h-[12.897rem] w-[100%] sm:min-w-[15.625rem]">
                 <Image
-                    className="rounded-md border-sm border-blue"
+                    className="rounded-md border-sm border-blue object-cover"
                     src={projectImage ?? '/images/programming-screen.jpg'}
                     alt="Programming code on a computer screen"
                     fill
                     sizes="15.625rem"
                 />
             </div>
-            <hgroup className="inline-flex flex-col justify-between gap-1 sm:pl-[1.3rem]">
+            <hgroup className="inline-flex flex-col justify-between gap-1 sm:pl-[1.3rem] pt-[1rem] md:pt-0">
                 <header className="flex flex-col gap-1">
                     <Title size={'h2'}>{title}</Title>
                     <ul className="flex flex-wrap gap-1">
