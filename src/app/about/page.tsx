@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 
 export default async function Page() {
     return (
-        <section className="flex justify-center">
-                <About />
-        </section>
+        <div className="flex justify-center">
+            <About />
+        </div>
     );
-};
+}

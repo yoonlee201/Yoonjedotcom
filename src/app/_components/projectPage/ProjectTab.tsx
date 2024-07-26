@@ -4,10 +4,13 @@ import { useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import {
+    faChevronUp,
+    faChevronDown,
+    faLaptopCode,
+} from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-import Demo from '~/public/icons/demo.svg';
-import Github from '~/public/icons/github.svg';
 import Node from '~/public/devicons/nodejs.svg';
 
 import { skills } from '~/src/constants/skills';
@@ -33,7 +36,7 @@ const ProjectTab = ({ projectList }: ProjectTabProps) => {
     }
 
     return (
-        <section className="flex h-full w-full flex-col items-center justify-center gap-3">
+        <div className="flex h-full w-full flex-col items-center justify-center gap-3">
             {projectList.map(
                 (
                     {
@@ -47,17 +50,17 @@ const ProjectTab = ({ projectList }: ProjectTabProps) => {
                     index
                 ) => (
                     <ProjectDescription
+                        key={index}
                         title={title}
                         projectImage={projectImage}
                         skillList={skillList}
                         description={description}
                         githubLink={githubLink}
                         demoLink={demoLink}
-                        index={index}
                     />
                 )
             )}
-        </section>
+        </div>
     );
 };
 
@@ -68,13 +71,10 @@ const ProjectDescription = ({
     description,
     githubLink,
     demoLink,
-    index,
-}: ProjectDescriptionProps & { index: number }) => {
+}: ProjectDescriptionProps) => {
     const [readMore, setReadMore] = useState<boolean>(false);
     return (
-        <div
-            key={index}
-            className="mt-3 flex flex-col items-center rounded-lg border-4 border-blue p-5 sm:w-[80%] sm:flex-row">
+        <div className="mt-3 flex flex-col items-center rounded-lg border-4 border-blue p-5 sm:w-[80%] sm:flex-row">
             <div className="relative h-[12.897rem] w-full sm:min-w-[13rem] md:min-w-[15.625rem]">
                 <Image
                     className="rounded-md border-sm border-blue object-cover"
@@ -84,7 +84,7 @@ const ProjectDescription = ({
                     sizes="15.625rem"
                 />
             </div>
-            <hgroup className="inline-flex flex-col justify-between gap-1 pt-[1rem] sm:pl-[1.3rem] md:pt-0">
+            <hgroup className="flex flex-col justify-between gap-1 pt-[1rem] sm:pl-[1.3rem] md:pt-0">
                 <header className="flex flex-col gap-1">
                     <Title size={'h2'}>{title}</Title>
                     <ul className="flex flex-wrap gap-1">
@@ -104,12 +104,8 @@ const ProjectDescription = ({
                     <div className="mr-auto flex gap-2">
                         {githubLink && (
                             <Link href={githubLink}>
-                                <Button >
-                                    <Image
-                                        src={Github}
-                                        alt="Github"
-                                        className={`svg-beige h-[90%] w-[90%]`}
-                                    />
+                                <Button>
+                                    <FontAwesomeIcon icon={faGithub} />
                                     Github
                                 </Button>
                             </Link>
@@ -117,11 +113,12 @@ const ProjectDescription = ({
                         {demoLink && (
                             <Link href={demoLink}>
                                 <Button>
-                                    <Image
+                                    {/* <Image
                                         src={Demo}
-                                        alt="Github"
+                                        alt="Demo"
                                         className={`svg-beige h-[90%] w-[90%]`}
-                                    />
+                                    /> */}
+                                    <FontAwesomeIcon icon={faLaptopCode} />
                                     Demo
                                 </Button>
                             </Link>
@@ -131,11 +128,12 @@ const ProjectDescription = ({
                         onClick={() => {
                             setReadMore(!readMore);
                         }}
-                        className="flex items-center gap-1 text-blue underline underline-offset-2 hover:text-red">
-                        <p className="block text-[0.8rem] hidden xs:block sm:hidden md:block">
+                        className="flex items-center justify-end gap-1 text-blue underline underline-offset-2 hover:text-red">
+                        <p className="xs:block block hidden text-[0.8rem] sm:hidden md:block">
                             read {readMore ? 'less' : 'more'}
                         </p>
                         <FontAwesomeIcon
+                            className="w-[10%]"
                             size="2xs"
                             icon={readMore ? faChevronUp : faChevronDown}
                         />

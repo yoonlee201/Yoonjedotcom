@@ -90,7 +90,6 @@ const config = {
                 lg: '3px',
                 xl: '4px',
             },
-            // min-h-[3.75rem] md:min-h-[4.3rem] lg:min-h-[4.7rem]`
             padding: {
                 'root-top': '3.75rem',
                 'root-top-md': '4.3rem',

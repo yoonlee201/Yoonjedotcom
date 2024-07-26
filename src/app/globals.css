@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
     --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 214, 219, 220;
     --background-end-rgb: 255, 255, 255;
-}
+} */
 
 @media (prefers-color-scheme: dark) {
     :root {
@@ -16,37 +16,25 @@
     }
 }
 
-body {
-    color: rgb(var(--foreground-rgb));
-    /* font-family: 'Krona One'; */
-    background: linear-gradient(
-            to bottom,
-            transparent,
-            rgb(var(--background-end-rgb))
-        )
-        rgb(var(--background-start-rgb));
-}
-
 html,
 body,
 #root {
     height: 100%;
     margin: 0;
-    background: #fbf6ea;
 }
+
 @layer utilities {
     .text-balance {
         text-wrap: balance;
     }
 }
 
+.svg-beige {
+    filter: brightness(0) saturate(100%) invert(97%) sepia(12%) saturate(407%)
+        hue-rotate(324deg) brightness(105%) contrast(93%);
+}
 
-    .svg-beige {
-        filter: brightness(0) saturate(100%) invert(97%) sepia(12%)
-            saturate(407%) hue-rotate(324deg) brightness(105%) contrast(93%);
-    }
-
-    .svg-blue {
-        filter: brightness(0) saturate(100%) invert(57%) sepia(11%)
-            saturate(371%) hue-rotate(188deg) brightness(94%) contrast(87%);
-    }
+.svg-blue {
+    filter: brightness(0) saturate(100%) invert(57%) sepia(11%) saturate(371%)
+        hue-rotate(188deg) brightness(94%) contrast(87%);
+}

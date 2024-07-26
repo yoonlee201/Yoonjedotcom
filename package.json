@@ -11,6 +11,7 @@
     },
     "dependencies": {
         "@fontsource/krona-one": "^5.0.13",
+        "@fortawesome/free-brands-svg-icons": "^6.6.0",
         "@fortawesome/free-solid-svg-icons": "^6.6.0",
         "@fortawesome/react-fontawesome": "^0.2.2",
         "@openfonts/krub_all": "^1.44.3",
@@ -25,7 +26,6 @@
         "recharts": "^2.12.7",
         "tailwind-scrollbar-hide": "^1.1.7",
         "three": "^0.166.0",
-        "touch-cli": "^0.0.1",
         "typewriter-effect": "^2.21.0"
     },
     "devDependencies": {

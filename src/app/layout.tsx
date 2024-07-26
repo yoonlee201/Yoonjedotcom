@@ -18,7 +18,7 @@ export default function RootLayout({
     return (
         <html
             lang="en"
-            className="h-full">
+            className="bg-beige">
             <head>
                 <link
                     rel="preconnect"
@@ -34,7 +34,7 @@ export default function RootLayout({
                 />
             </head>
 
-            <body className="relative flex min-h-screen flex-col bg-beige">
+            <body className="relative flex min-h-screen flex-col">
                 <NavBar />
                 <main className="realtive mt-root-top md:mt-root-top-md lg:mt-root-top-lg">
                     {children}
