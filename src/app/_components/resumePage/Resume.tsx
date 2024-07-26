@@ -5,7 +5,7 @@ import { Title } from '@/app/_components/Title';
 import { Button } from '@/app/_components/Button';
 import Download from '~/public/icons/download.svg';
 import Image from 'next/image';
-import pdf from '~/public/Lee_Yoonje_Resume.pdf';
+import pdf from '~/public/files/Lee_Yoonje_Resume.pdf';
 
 const Resume = () => {
     const handelDownload = () => {

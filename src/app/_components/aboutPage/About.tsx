@@ -7,7 +7,7 @@ import Skillset from '@/app/_components/aboutPage/Skillset';
 import Introduction from '@/app/_components/aboutPage/Introduction';
 import { Title } from '@/app/_components/Title';
 import { ConnectIcons } from '@/app/_components/Logo';
-import ProfileImage from '~/public/images/IMG_9617.JPG';
+import ProfileImage from '~/public/images/YoonjeProfile.JPG';
 
 const About = () => {
     return (

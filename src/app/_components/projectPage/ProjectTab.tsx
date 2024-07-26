@@ -1,22 +1,30 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+
+import Demo from '~/public/icons/demo.svg';
+import Github from '~/public/icons/github.svg';
 import Node from '~/public/devicons/nodejs.svg';
+
 import { skills } from '~/src/constants/skills';
 import { Title } from '@/app/_components/Title';
 import { Button } from '@/app/_components/Button';
-import Link from 'next/link';
-import Github from '~/public/icons/github.svg';
-import Demo from '~/public/icons/demo.svg';
+
+interface ProjectDescriptionProps {
+    title: string;
+    projectImage: string | null;
+    skillList: string[];
+    description: string;
+    githubLink: string | null;
+    demoLink: string | null;
+}
 
 interface ProjectTabProps {
-    projectList: {
-        projectImage: string | null;
-        skillList: string[];
-        description: string;
-        githubLink: string | null;
-        demoLink: string | null;
-    }[];
+    projectList: ProjectDescriptionProps[];
 }
 
 const ProjectTab = ({ projectList }: ProjectTabProps) => {
@@ -29,6 +37,7 @@ const ProjectTab = ({ projectList }: ProjectTabProps) => {
             {projectList.map(
                 (
                     {
+                        title,
                         projectImage,
                         skillList,
                         description,
@@ -37,64 +46,101 @@ const ProjectTab = ({ projectList }: ProjectTabProps) => {
                     },
                     index
                 ) => (
-                    <div
-                        key={index}
-                        className="mt-3 flex flex-col rounded-lg border-4 border-blue p-5 sm:w-[80%] sm:flex-row">
-                        <div className="relative h-[12.897rem] w-[100%] sm:h-[12.897rem] sm:w-[15.625rem]">
-                            <Image
-                                className="rounded-md object-cover"
-                                src={projectImage ?? '/programming-screen.jpg'}
-                                alt="Programming code on a computer screen"
-                                fill
-                                sizes="15.625rem"
-                            />
-                        </div>
-                        <hgroup className="inline-flex flex-col justify-between gap-1 sm:pl-[1.3rem]">
-                            <header className="flex flex-col gap-1">
-                                <Title size={'h2'}>Project Title</Title>
-                                <ul className="flex flex-wrap gap-1">
-                                    {skillList.map((s, skillIndex) => (
-                                        <SkillCapsule
-                                            key={skillIndex}
-                                            skill={s}
-                                        />
-                                    ))}
-                                </ul>
-                                <p className="pt-[0.5rem] text-[0.8rem] text-p text-blue-2">
-                                    {description}
-                                </p>
-                            </header>
-                            <div className="inline-flex gap-2">
-                                {githubLink && (
-                                    <Link href={githubLink}>
-                                        <Button>
-                                            <Image
-                                                src={Github}
-                                                alt="Github"
-                                                className={`svg-beige h-[90%] w-[90%]`}
-                                            />
-                                            Github
-                                        </Button>
-                                    </Link>
-                                )}
-                                {demoLink && (
-                                    <Link href={demoLink}>
-                                        <Button>
-                                            <Image
-                                                src={Demo}
-                                                alt="Github"
-                                                className={`svg-beige h-[90%] w-[90%]`}
-                                            />
-                                            Demo
-                                        </Button>
-                                    </Link>
-                                )}
-                            </div>
-                        </hgroup>
-                    </div>
+                    <ProjectDescription
+                        title={title}
+                        projectImage={projectImage}
+                        skillList={skillList}
+                        description={description}
+                        githubLink={githubLink}
+                        demoLink={demoLink}
+                        index={index}
+                    />
                 )
             )}
         </section>
+    );
+};
+
+const ProjectDescription = ({
+    title,
+    projectImage,
+    skillList,
+    description,
+    githubLink,
+    demoLink,
+    index,
+}: ProjectDescriptionProps & { index: number }) => {
+    const [readMore, setReadMore] = useState<boolean>(false);
+    return (
+        <div
+            key={index}
+            className="mt-3 flex flex-col items-center rounded-lg border-4 border-blue p-5 sm:w-[80%] sm:flex-row">
+            <div className="relative h-[12.897rem] w-[100%] sm:min-w-[15.625rem]">
+                <Image
+                    className="rounded-md border-sm border-blue"
+                    src={projectImage ?? '/images/programming-screen.jpg'}
+                    alt="Programming code on a computer screen"
+                    fill
+                    sizes="15.625rem"
+                />
+            </div>
+            <hgroup className="inline-flex flex-col justify-between gap-1 sm:pl-[1.3rem]">
+                <header className="flex flex-col gap-1">
+                    <Title size={'h2'}>{title}</Title>
+                    <ul className="flex flex-wrap gap-1">
+                        {skillList.map((s, skillIndex) => (
+                            <SkillCapsule
+                                key={skillIndex}
+                                skill={s}
+                            />
+                        ))}
+                    </ul>
+                    <p
+                        className={`${!readMore && 'line-clamp-5'} pt-[0.5rem] text-[0.8rem] text-p text-blue-2`}>
+                        {description}
+                    </p>
+                </header>
+                <div className="flex items-center justify-between text-center">
+                    <div className="inline-flex gap-2">
+                        {githubLink && (
+                            <Link href={githubLink}>
+                                <Button>
+                                    <Image
+                                        src={Github}
+                                        alt="Github"
+                                        className={`svg-beige h-[90%] w-[90%]`}
+                                    />
+                                    Github
+                                </Button>
+                            </Link>
+                        )}
+                        {demoLink && (
+                            <Link href={demoLink}>
+                                <Button>
+                                    <Image
+                                        src={Demo}
+                                        alt="Github"
+                                        className={`svg-beige h-[90%] w-[90%]`}
+                                    />
+                                    Demo
+                                </Button>
+                            </Link>
+                        )}
+                    </div>
+                    <button
+                        onClick={() => {
+                            setReadMore(!readMore);
+                        }}
+                        className="text-p text-blue underline underline-offset-2 hover:text-red">
+                        read {readMore ? 'less' : 'more'}{' '}
+                        <FontAwesomeIcon
+                            size="2xs"
+                            icon={readMore ? faChevronUp : faChevronDown}
+                        />
+                    </button>
+                </div>
+            </hgroup>
+        </div>
     );
 };
 

@@ -22,7 +22,7 @@ export const Title = ({
     );
 };
 
-const titleVariants = cva('flex text-krona-one', {
+const titleVariants = cva('flex font-krona-one font-thin', {
     variants: {
         size: {
             h1: 'text-h1 pt-[3rem]',

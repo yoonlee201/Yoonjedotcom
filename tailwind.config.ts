@@ -33,21 +33,21 @@ const config = {
         extend: {
             fontSize: {
                 h1: [
-                    '2rem',
-                    {
-                        lineHeight: '1.2',
-                        fontWeight: 600,
-                    },
-                ],
-                h2: [
                     '1.25rem',
                     {
                         lineHeight: '1.2',
-                        fontWeight: 500,
+                        fontWeight: 100,
+                    },
+                ],
+                h2: [
+                    '1rem',
+                    {
+                        lineHeight: '1.2',
+                        fontWeight: 100,
                     },
                 ],
                 h3: [
-                    '1rem',
+                    '0.9rem',
                     {
                         lineHeight: '1.2',
                         fontWeight: 500,
@@ -67,30 +67,11 @@ const config = {
                         fontWeight: 600,
                     },
                 ],
-                'button-sm': [
-                    '0.9375rem',
-                    {
-                        lineHeight: '1',
-                        fontWeight: 600,
-                    },
-                ],
                 navlink: [
-                    '0.9375rem',
+                    '0.75rem',
                     {
                         lineHeight: '1',
-                        fontWeight: 500,
-                    },
-                ],
-                sm: [
-                    '0.875rem',
-                    {
-                        lineHeight: '1.5',
-                    },
-                ],
-                xs: [
-                    '0.625rem',
-                    {
-                        lineHeight: '1.5',
+                        fontWeight: 100,
                     },
                 ],
             },

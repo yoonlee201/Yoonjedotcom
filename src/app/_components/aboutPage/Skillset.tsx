@@ -53,13 +53,12 @@ const Skillset: React.FC = () => {
                                 loading="lazy"
                                 src={skills[i].icon}
                                 alt={skills[i].name}
-                                // priority/
                             />
                         </div>
                     </div>
                     <Title
                         size={'h2'}
-                        className="w-full justify-center">
+                        className="w-full justify-center font-krub font-normal">
                         {skills[i].name}
                     </Title>
                 </div>

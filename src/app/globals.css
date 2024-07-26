@@ -18,6 +18,7 @@
 
 body {
     color: rgb(var(--foreground-rgb));
+    /* font-family: 'Krona One'; */
     background: linear-gradient(
             to bottom,
             transparent,
@@ -39,12 +40,13 @@ body,
     }
 }
 
-.svg-beige {
-    filter: brightness(0) saturate(100%) invert(97%) sepia(12%) saturate(407%)
-        hue-rotate(324deg) brightness(105%) contrast(93%);
-}
 
-.svg-blue {
-    filter: brightness(0) saturate(100%) invert(57%) sepia(11%) saturate(371%)
-        hue-rotate(188deg) brightness(94%) contrast(87%);
-}
+    .svg-beige {
+        filter: brightness(0) saturate(100%) invert(97%) sepia(12%)
+            saturate(407%) hue-rotate(324deg) brightness(105%) contrast(93%);
+    }
+
+    .svg-blue {
+        filter: brightness(0) saturate(100%) invert(57%) sepia(11%)
+            saturate(371%) hue-rotate(188deg) brightness(94%) contrast(87%);
+    }
