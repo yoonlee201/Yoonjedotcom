@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
-    assetPrefix: process.env.NODE_ENV === 'production' ? '/Yoonjedotcom' : '',
-    basePath: process.env.NODE_ENV === 'production' ? '/Yoonjedotcom' : '',
+    assetPrefix: process.env.NODE_ENV === 'production' ? '/' : '',
+    basePath: process.env.NODE_ENV === 'production' ? '/' : '',
     images: {
         unoptimized: true,
     },
@@ -15,8 +15,8 @@ const nextConfig = {
                     options: {
                         name: '[name].[hash].[ext]',
                         outputPath: 'static/models/',
-                        // publicPath: '/_next/static/models/',
-                        publicPath: '/Yoonjedotcom/_next/static/models/',
+                        publicPath: '/_next/static/models/',
+                        // publicPath: '/Yoonjedotcom/_next/static/models/',
                     },
                 },
             },
@@ -27,8 +27,8 @@ const nextConfig = {
                     options: {
                         name: '[name].[hash].[ext]',
                         outputPath: 'static/files/',
-                        // publicPath: '/_next/static/files/',
-                        publicPath: '/Yoonjedotcom/_next/static/files/',
+                        publicPath: '/_next/static/files/',
+                        // publicPath: '/Yoonjedotcom/_next/static/files/',
                     },
                 },
             }

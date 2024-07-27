@@ -21,6 +21,6 @@ export const skills = [
     { name: 'git', percent: 80, icon: Git },
     { name: 'mongodb', percent: 30, icon: Mongodb },
     { name: 'prisma', percent: 35, icon: Prisma },
-    { name: 'trpc', percent: 55, icon: Trpc },
-    { name: 'tailwind', percent: 30, icon: Tailwind },
+    { name: 'trpc', percent: 30, icon: Trpc },
+    { name: 'tailwind', percent:  60, icon: Tailwind },
 ];
