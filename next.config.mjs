@@ -16,7 +16,17 @@ const nextConfig = {
                         name: '[name].[hash].[ext]',
                         outputPath: 'static/models/',
                         publicPath: '/_next/static/models/',
-                        // publicPath: '/Yoonjedotcom/_next/static/models/',
+                    },
+                },
+            },
+            {
+                test: /\.(jpg|JPG|png|svg)$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[hash].[ext]',
+                        outputPath: 'static/images/',
+                        publicPath: '/Yoonjedotcom/_next/static/images/',
                     },
                 },
             },
@@ -28,7 +38,18 @@ const nextConfig = {
                         name: '[name].[hash].[ext]',
                         outputPath: 'static/files/',
                         publicPath: '/_next/static/files/',
-                        // publicPath: '/Yoonjedotcom/_next/static/files/',
+                    },
+                },
+            },
+            {
+                test: /\.(svg)$/,
+                include: /devicons/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[hash].[ext]',
+                        outputPath: 'static/devicons/',
+                        publicPath: '/_next/static/devicons/',
                     },
                 },
             }

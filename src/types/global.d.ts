@@ -20,7 +20,7 @@ declare module '*.JPG' {
     export default content;
 }
 
-declare module '*.obj' {
+declare module '*.svg' {
     const content: string;
     export default content;
 }
