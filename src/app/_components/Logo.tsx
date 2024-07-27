@@ -13,6 +13,8 @@ export const Logo = () => {
         <Image
             className="min-h-[3.6rem] min-w-[5.7rem]"
             src={YoonjeLogo}
+            width={8}
+            height={8}
             alt="Yoonje Lee's Website"
         />
     );
@@ -34,6 +36,8 @@ export const ConnectIcons = ({
                 <Image
                     src={LinkedIn}
                     alt="LinkedIn"
+                    width={25}
+                    height={25}
                     className={`svg-${color}`}
                 />
             </Link>
@@ -41,12 +45,16 @@ export const ConnectIcons = ({
                 <Image
                     src={Github}
                     alt="Github"
+                    width={25}
+                    height={25}
                     className={`svg-${color}`}
                 />
             </Link>
             <Link href={'https://www.instagram.com/while._.ylee/?hl=en'}>
                 <Image
                     src={Instagram}
+                    width={25}
+                    height={25}
                     alt="Instagram"
                     className={`svg-${color}`}
                 />

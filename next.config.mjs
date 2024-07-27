@@ -20,17 +20,6 @@ const nextConfig = {
                 },
             },
             {
-                test: /\.(jpg|JPG|png|svg)$/,
-                use: {
-                    loader: 'file-loader',
-                    options: {
-                        name: '[name].[hash].[ext]',
-                        outputPath: 'static/images/',
-                        publicPath: '/Yoonjedotcom/_next/static/images/',
-                    },
-                },
-            },
-            {
                 test: /\.pdf$/,
                 use: {
                     loader: 'file-loader',
@@ -41,18 +30,6 @@ const nextConfig = {
                     },
                 },
             },
-            {
-                test: /\.(svg)$/,
-                include: /devicons/,
-                use: {
-                    loader: 'file-loader',
-                    options: {
-                        name: '[name].[hash].[ext]',
-                        outputPath: 'static/devicons/',
-                        publicPath: '/_next/static/devicons/',
-                    },
-                },
-            }
         );
         return config;
     },
