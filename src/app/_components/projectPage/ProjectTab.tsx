@@ -113,11 +113,6 @@ const ProjectDescription = ({
                         {demoLink && (
                             <Link href={demoLink}>
                                 <Button>
-                                    {/* <Image
-                                        src={Demo}
-                                        alt="Demo"
-                                        className={`svg-beige h-[90%] w-[90%]`}
-                                    /> */}
                                     <FontAwesomeIcon icon={faLaptopCode} />
                                     Demo
                                 </Button>

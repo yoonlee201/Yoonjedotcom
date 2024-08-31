@@ -10,12 +10,12 @@ export const RestrictedOrbitControls = () => {
 
     useEffect(() => {
         if (controlsRef.current) {
-            controlsRef.current.minAzimuthAngle = -Math.PI / 4; // -45 degrees
-            controlsRef.current.maxAzimuthAngle = Math.PI / 4; // 45 degrees
-            controlsRef.current.minPolarAngle = Math.PI / 3; // Prevent looking too low
-            controlsRef.current.maxPolarAngle = (Math.PI * 2) / 3; // Prevent looking too high
-            controlsRef.current.minDistance = 1;
-            controlsRef.current.maxDistance = 5;
+            controlsRef.current.minAzimuthAngle = -Math.PI / 3; // -45 degrees
+            controlsRef.current.maxAzimuthAngle = Math.PI / 3; // 45 degrees
+            controlsRef.current.minPolarAngle = Math.PI / 5; // Prevent looking too low
+            controlsRef.current.maxPolarAngle = (Math.PI) / (1/2); // Prevent looking too high
+            controlsRef.current.minDistance = 10;
+            controlsRef.current.maxDistance = 30;
         }
     }, [camera]);
 
@@ -34,10 +34,8 @@ export const SunLight = () => {
 
     useEffect(() => {
         if (lightRef.current) {
-            lightRef.current.shadow.mapSize.width = 2048;
-            lightRef.current.shadow.mapSize.height = 2048;
-            lightRef.current.shadow.camera.near = 1;
-            lightRef.current.shadow.camera.far = 50;
+            // lightRef.current.shadow.camera.near = 2;
+            // lightRef.current.shadow.camera.far = 50;
         }
     }, []);
 
@@ -45,7 +43,7 @@ export const SunLight = () => {
         <directionalLight
             ref={lightRef}
             position={[-4.0, 0.6, 9.1]}
-            intensity={3}
+            intensity={5}
             castShadow
         />
     );

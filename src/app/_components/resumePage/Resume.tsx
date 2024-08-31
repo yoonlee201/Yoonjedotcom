@@ -27,9 +27,7 @@ const Resume = () => {
                 Download
             </Button>
             <iframe
-                src={
-                    'https://utfs.io/f/246d8b69-60a0-416e-821e-a637a97d6c9d-uo748n.pdf#toolbar=0'
-                }
+                src={pdf}
                 className="lg:[800px] h-[500px] w-full md:h-[700px]"
             />
         </div>

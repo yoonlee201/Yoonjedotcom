@@ -10,6 +10,7 @@ import Mongodb from '~/public/devicons/mongodb.svg';
 import Prisma from '~/public/devicons/prisma.svg';
 import Trpc from '~/public/devicons/trpc.svg';
 import Tailwind from '~/public/devicons/tailwind.svg';
+
 export const skills = [
     { name: 'javascript', percent: 60, icon: Javascript },
     { name: 'react', percent: 75, icon: React },
