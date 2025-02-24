@@ -19,7 +19,7 @@ import { Button } from '@/app/_components/Button';
 
 interface ProjectDescriptionProps {
     title: string;
-    projectImage: StaticImageData;
+    projectImage: StaticImageData | null;
     skillList: string[];
     description: string;
     githubLink: string | null;
