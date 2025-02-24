@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import NavBar from '@/app/_components/NavBar';
 import Footer from '@/app/_components/Footer';
+import "@/types/googleTag"
 
 export const metadata: Metadata = {
     title: {
@@ -15,6 +16,7 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+
     return (
         <html
             lang="en"
@@ -35,6 +37,18 @@ export default function RootLayout({
             </head>
 
             <body className="relative flex min-h-screen flex-col">
+                {/* <!-- Google Tag Manager (noscript) --> */}
+                {/* <noscript>
+                    <iframe
+                        src="https://www.googletagmanager.com/ns.html?id=GTM-PSN3LLG4"
+                        height="0"
+                        width="0"
+                        style={{
+                            display: 'none',
+                            visibility: 'hidden',
+                        }}></iframe>
+                </noscript> */}
+                {/* <!-- End Google Tag Manager (noscript) --> */}
                 <NavBar />
                 <main className="realtive mt-root-top md:mt-root-top-md lg:mt-root-top-lg">
                     {children}

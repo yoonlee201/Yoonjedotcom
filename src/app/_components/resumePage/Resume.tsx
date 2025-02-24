@@ -3,7 +3,7 @@
 import React from 'react';
 import { Title } from '@/app/_components/Title';
 import { Button } from '@/app/_components/Button';
-import pdf from '~/public/files/Lee_Yoonje_Resume.pdf';
+import pdf from '~/public/files/yoonje_lee.pdf';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -11,7 +11,7 @@ const Resume = () => {
     const handelDownload = () => {
         const link = document.createElement('a');
         link.href = pdf;
-        link.download = 'Lee_Yoonje_Resume.pdf'; // specify the filename
+        link.download = 'yoonje_lee.pdf'; // specify the filename
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
