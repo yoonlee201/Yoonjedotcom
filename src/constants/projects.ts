@@ -34,6 +34,7 @@ export const projects = [
          screen-space texture mapping will be used, ensuring that textures appear fixed regardless 
          of object rotation. By combining these two techniques, the final rendering will achieve a 
          visually compelling painterly effect with consistent texture placement.`,
+        githubLink: 'https://github.com/yoonlee201/split-money',
         demoLink:
             'https://bmdj-vt.github.io/teaching/computer_graphics_2024#:~:text=Stylized%20Rendering%20(Paint%20Strokes%20%2B%20Screen%20Space%20Texturing)%3A%20Yoonje%20Lee%2C%20Daniel%20Koo',
     },
