@@ -1,8 +1,11 @@
 import split from '~/public/images/split-money.jpg';
+import stylized from '~/public/images/paint_stylized.gif';
+import rewardbot from '~/public/images/rewardbot.jpg';
+import interactiveData from '~/public/images/interactive-data.jpg';
 export const projects = [
     {
         title: 'RewardBot',
-        projectImage: null,
+        projectImage: rewardbot,
         skillList: ['javascript', 'node.js', 'mongodb', 'express.js'],
         description: `The Reward Bot for Canvas is a web application designed
          to help students stay motivated by rewarding them for completing assignments
@@ -17,6 +20,22 @@ export const projects = [
            study habits and reduces distractions, helping students become more productive.`,
         githubLink: 'https://github.com/CantBeLAME/RewardBot',
         demoLink: 'https://www.youtube.com/watch?v=UpOokWNOGZI',
+    },
+    {
+        title: 'Stylized Rendering/Shading - 3D Graphics Final Project',
+        projectImage: stylized,
+        skillList: ['python'],
+        description: `Course Project for Computer Graphics (2024) at Virginia Tech. 
+        This project explores stylized rendering techniques by applying a painting effect with brush 
+        strokes and integrating screen-space texture mapping to create a unique shading style. 
+        The painting effect simulates brush strokes by tracking painted pixels and applying 
+        randomized strokes until the surface is covered. To enhance realism, stroke size and
+         direction will be adjusted based on depth and shading. Instead of traditional UV mapping, 
+         screen-space texture mapping will be used, ensuring that textures appear fixed regardless 
+         of object rotation. By combining these two techniques, the final rendering will achieve a 
+         visually compelling painterly effect with consistent texture placement.`,
+        demoLink:
+            'https://bmdj-vt.github.io/teaching/computer_graphics_2024#:~:text=Stylized%20Rendering%20(Paint%20Strokes%20%2B%20Screen%20Space%20Texturing)%3A%20Yoonje%20Lee%2C%20Daniel%20Koo',
     },
     {
         title: 'Split Money',
@@ -34,9 +53,9 @@ export const projects = [
     },
     {
         title: 'Interactive Data Visualization Tool',
-        projectImage: null,
+        projectImage: interactiveData,
         skillList: ['javascript', 'node.js', 'mongodb', 'express.js'],
-        description: `The project is a dynamic data visualization and management tool 
+        description: `Course Project for Intro to GUI (2023) at Virginia Tech. The project is a dynamic data visualization and management tool 
                         designed to streamline dataset handling through an intuitive interface. 
                         It features an interactive editor that automatically updates visual representations, 
                         including bar charts and scatter plots, in real time. Users can select, edit, 
@@ -48,7 +67,7 @@ export const projects = [
                         With support for pagination and dataset constraints, this tool optimizes data exploration, 
                         making complex dataset analysis more accessible and efficient.`,
         githubLink: null,
-        demoLink: null,
+        demoLink: 'https://youtu.be/YVH7nZuGqHs',
     },
     {
         title: 'Guardian Tales',
