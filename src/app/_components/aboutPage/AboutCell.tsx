@@ -3,7 +3,7 @@
 const AboutCell = () => {
     const introduction = [
         { h3: 'Name', p: 'Yoonje Lee' },
-        { h3: 'Age', p: '21' },
+        { h3: 'Age', p: '22' },
         { h3: 'College', p: 'Virginia Tech' },
         { h3: 'Major', p: 'BS in Computer Science' },
         { h3: 'Hometown', p: 'Seoul Korea' },
