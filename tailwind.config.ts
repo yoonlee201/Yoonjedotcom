@@ -1,5 +1,10 @@
 import type { Config } from 'tailwindcss';
 
+// NOTE: Tailwind v4 uses CSS-first configuration by default.
+// This file is kept for compatibility and loaded via `@config "./tailwind.config.ts"`
+// in your globals.css. See the migration guide:
+// https://tailwindcss.com/docs/upgrade-guide
+
 const config = {
     darkMode: ['class'],
     content: ['./src/app/**/*.{ts,tsx}'],
@@ -39,42 +44,42 @@ const config = {
                     '1.25rem',
                     {
                         lineHeight: '1.2',
-                        fontWeight: 100,
+                        fontWeight: '100',
                     },
                 ],
                 h2: [
                     '1rem',
                     {
                         lineHeight: '1.2',
-                        fontWeight: 100,
+                        fontWeight: '100',
                     },
                 ],
                 h3: [
                     '0.9rem',
                     {
                         lineHeight: '1.2',
-                        fontWeight: 500,
+                        fontWeight: '500',
                     },
                 ],
                 p: [
                     '1rem',
                     {
                         lineHeight: '1.5',
-                        fontWeight: 300,
+                        fontWeight: '300',
                     },
                 ],
                 button: [
                     '1.125rem',
                     {
                         lineHeight: '1',
-                        fontWeight: 600,
+                        fontWeight: '600',
                     },
                 ],
                 navlink: [
                     '0.75rem',
                     {
                         lineHeight: '1',
-                        fontWeight: 100,
+                        fontWeight: '100',
                     },
                 ],
             },
@@ -98,7 +103,7 @@ const config = {
                 'root-bottom-md': '4.3rem',
                 'root-bottom-lg': '4.7rem',
             },
-            margin: ({ theme }) => ({
+            margin: ({ theme }: { theme: (key: string) => Record<string, string> }) => ({
                 ...theme('padding'),
             }),
         },
