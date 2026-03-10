@@ -1,4 +1,6 @@
 import type { Tab } from './Layout'
+import profilePhoto from '../assets/YoonjeProfile.JPG'
+import logo from '../assets/YoonjeLogo.svg'
 
 const tabs: { id: Tab; label: string }[] = [
   { id: 'about', label: 'About & Skills' },
@@ -18,10 +20,12 @@ export default function Sidebar({ activeTab, onTabChange }: SidebarProps) {
   return (
     <aside className="w-64 shrink-0 flex flex-col p-6 gap-6 bg-surface">
 
-      {/* Photo */}
-      <div className="rounded-2xl overflow-hidden border border-border/50 bg-tag aspect-square w-full flex items-center justify-center text-muted text-sm tracking-widest uppercase">
-        {/* Replace with <img src="..." className="w-full h-full object-cover" /> */}
-        Photo
+      {/* Logo + Photo */}
+      <div className="flex flex-col items-center gap-3">
+        <img src={logo} alt="Yoonje Lee logo" className="h-8 w-auto opacity-70" />
+        <div className="rounded-2xl overflow-hidden border border-border/50 w-full">
+          <img src={profilePhoto} alt="Yoonje Lee" className="w-full object-cover" />
+        </div>
       </div>
 
       {/* Nav */}
@@ -33,7 +37,7 @@ export default function Sidebar({ activeTab, onTabChange }: SidebarProps) {
             className={`
           text-left px-3 py-2 rounded-xl text-[15px] tracking-wide transition-all duration-200
           ${activeTab === tab.id
-                ? 'bg-active text-primary font-semibold'
+              ? 'bg-tag text-primary font-semibold'
                 : 'text-muted hover:bg-hover hover:text-primary'
               }
         `}

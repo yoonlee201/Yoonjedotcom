@@ -1,12 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 @import "tailwindcss";
 
 :root {
   box-sizing: border-box;
 }
 
+body {
+  font-family: var(--font-sans);
+}
+
 @import "tailwindcss";
 
 @theme {
+  --font-sans: Inter, sans-serif;
   --color-bg: #f5f0e8;
   --color-surface: #faf7f2;
   --color-border: #c8b89a;
@@ -14,18 +20,22 @@
   --color-secondary: #5a4a38;
   --color-muted: #a89880;
   --color-tag: #e8dfd0;
+  --color-tab: var(--color-muted);
   --color-active: #e8dfd0;
   --color-hover: #f0ebe2;
 }
 
 [data-theme="dark"] {
-  --color-bg: #1a1714;
-  --color-surface: #201e1b;
-  --color-border: #3d3530;
-  --color-primary: #f0e8d8;
-  --color-secondary: #c8b89a;
-  --color-muted: #7a6a58;
-  --color-tag: #2a2520;
-  --color-active: #2e2820;
-  --color-hover: #262220;
+  --font-sans: Inter, sans-serif;
+  --color-bg: #000000;        /* Apple system black */
+  --color-surface: #1c1c1e;   /* Apple systemGray6 */
+  --color-border: #38383a;    /* Apple systemGray4 */
+  --color-primary: #ffffff;   /* Apple primary label */
+  --color-secondary: #aeaeb2; /* Apple secondary label */
+  --color-muted: #636366;     /* Apple systemGray2 */
+  --color-tag: #2c2c2e;       /* Apple systemGray5 */
+  --color-tab: #2c2c2e;
+  --color-active: #3a3a3c;    /* Apple systemGray4 */
+  --color-hover: #2c2c2e;
 }
+

@@ -1,7 +1,8 @@
 const links = [
-  { label: 'Email', value: 'you@email.com', href: 'mailto:you@email.com' },
-  { label: 'GitHub', value: 'github.com/yourhandle', href: 'https://github.com/yourhandle' },
-  { label: 'LinkedIn', value: 'linkedin.com/in/yourname', href: 'https://linkedin.com/in/yourname' },
+  { label: 'Email', value: 'ylee201@vt.edu', href: 'mailto:ylee201@vt.edu' },
+  { label: 'Phone', value: '(571) 595-9546', href: 'tel:+15715959546' },
+  { label: 'GitHub', value: 'github.com/yoonlee201', href: 'https://github.com/yoonlee201' },
+  { label: 'LinkedIn', value: 'linkedin.com/in/yoonje-lee', href: 'https://linkedin.com/in/yoonje-lee' },
 ]
 
 export default function Contacts() {
@@ -15,9 +16,9 @@ export default function Contacts() {
             href={l.href}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center justify-between rounded-2xl border border-border/40 bg-bg px-5 py-4 hover:border-border hover:bg-[#ede8df] transition-all group"
+            className="flex items-center justify-between rounded-2xl border border-border bg-surface px-5 py-4 hover:border-border hover:bg-hover transition-all group"
           >
-            <span className="text-xs tracking-widest uppercase text-muted group-hover:text-[#7a6a58] transition-colors">
+            <span className="text-xs tracking-widest uppercase text-muted group-hover:text-primary transition-colors">
               {l.label}
             </span>
             <span className="text-secondary text-sm group-hover:text-primary transition-colors">

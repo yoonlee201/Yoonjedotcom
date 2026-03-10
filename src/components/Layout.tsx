@@ -23,7 +23,7 @@ export default function Layout() {
   const [activeTab, setActiveTab] = useState<Tab>('about')
 
   return (
-    <div className="min-h-screen bg-bg flex items-center justify-center p-6 font-['Cormorant_Garamond',serif]">
+    <div className="min-h-screen bg-bg flex items-center justify-center p-6">
       <div className="w-full max-w-6xl h-[85vh] flex rounded-3xl overflow-hidden shadow-2xl border border-border/40 bg-surface">
 
         {/* Sidebar */}
@@ -45,7 +45,6 @@ export default function Layout() {
       </div>
 
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cormorant+SC:wght@300;400;500&display=swap');
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(8px); }
           to   { opacity: 1; transform: translateY(0); }

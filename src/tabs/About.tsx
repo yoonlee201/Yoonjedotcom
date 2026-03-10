@@ -1,3 +1,10 @@
+const skillGroups = [
+  { label: 'Languages', skills: ['C', 'Java', 'Python', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'SQL'] },
+  { label: 'Frameworks & Libraries', skills: ['React', 'Next.js', 'Flask', 'Tailwind CSS', 'Prisma', 'React Native', 'pandas', 'NumPy', 'matplotlib', 'seaborn', 'Recharts'] },
+  { label: 'Databases', skills: ['MySQL', 'PostgreSQL', 'SQLite', 'MongoDB', 'Firebase'] },
+  { label: 'Tools & Technologies', skills: ['Git', 'GitHub', 'Linux/UNIX', 'REST API', 'Postman', 'OpenAI API'] },
+]
+
 export default function About() {
   return (
     <div>
@@ -6,18 +13,25 @@ export default function About() {
 
       <section className="mb-8">
         <h2 className="text-xs tracking-widest uppercase text-muted mb-3">About</h2>
-        <p className="text-secondary leading-relaxed text-[15px]">
-          A short bio about yourself goes here. Describe your interests, background, and what drives you.
+        <p className="text-primary leading-relaxed text-[15px]">
+          CS grad student at Virginia Tech (M.Eng. 2026) with a background in full-stack web development, LLM integration, and data analysis. I enjoy building clean, performant interfaces and end-to-end systems — from React frontends to Flask backends to cloud deployments.
         </p>
       </section>
 
       <section>
         <h2 className="text-xs tracking-widest uppercase text-muted mb-3">Skills</h2>
-        <div className="flex flex-wrap gap-2">
-          {['React', 'TypeScript', 'Python', 'Node.js', 'Tailwind CSS', 'SQL'].map(skill => (
-            <span key={skill} className="px-3 py-1 rounded-full bg-[#e8dfd0] text-secondary text-sm">
-              {skill}
-            </span>
+        <div className="flex flex-col gap-4">
+          {skillGroups.map(group => (
+            <div key={group.label}>
+              <p className="text-xs tracking-widest uppercase text-muted mb-2">{group.label}</p>
+              <div className="flex flex-wrap gap-2">
+                {group.skills.map(skill => (
+                  <span key={skill} className="px-3 py-1 rounded-full bg-tag text-primary text-sm">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </section>
