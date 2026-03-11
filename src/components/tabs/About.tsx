@@ -1,13 +1,8 @@
-const skillGroups = [
-  { label: 'Languages', skills: ['C', 'Java', 'Python', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'SQL'] },
-  { label: 'Frameworks & Libraries', skills: ['React', 'Next.js', 'Flask', 'Tailwind CSS', 'Prisma', 'React Native', 'pandas', 'NumPy', 'matplotlib', 'seaborn', 'Recharts'] },
-  { label: 'Databases', skills: ['MySQL', 'PostgreSQL', 'SQLite', 'MongoDB', 'Firebase'] },
-  { label: 'Tools & Technologies', skills: ['Git', 'GitHub', 'Linux/UNIX', 'REST API', 'Postman', 'OpenAI API'] },
-]
+import { skillGroups } from '../../constants/about'
 
 export default function About() {
   return (
-    <div>
+    <>
       <h1 className="text-3xl font-light tracking-wide text-primary mb-1">Yoonje Lee</h1>
       <p className="text-muted text-sm tracking-widest uppercase mb-8">Software Engineer</p>
 
@@ -35,6 +30,6 @@ export default function About() {
           ))}
         </div>
       </section>
-    </div>
+    </>
   )
 }
