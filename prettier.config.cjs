@@ -1,10 +1,8 @@
 /** @type {import("prettier").Config} */
 const config = {
     plugins: [require.resolve('prettier-plugin-tailwindcss')],
-    arrowParens: 'avoid',
     bracketSpacing: true,
     endOfLine: 'lf',
-    htmlWhitespaceSensitivity: 'css',
     insertPragma: false,
     singleAttributePerLine: true,
     bracketSameLine: true,
