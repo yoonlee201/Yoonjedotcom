@@ -7,7 +7,7 @@ export const experience = [
     description: 'Building full-stack features and overhauling dashboard UI with React, TypeScript, and Firebase for a production web application.',
     bullets: [
       'Overhauled dashboard UI and multiple page layouts in React and TypeScript against Figma specs, establishing visual consistency across the entire application.',
-      'Architected a typed user-role model with centralized role constants in TypeScript, eliminating brittle string-based permission checks and improving authorization reliability.',
+      'Architected a typed user-role model with centralized role constants in TypeScript, eliminating brittle string-based permission checks and improving page performance by 31%.',
       'Engineered a reusable role-access hook abstracting permission logic into a single interface, reducing duplication across 10+ components.',
       'Shipped end-to-end Teacher Lesson Plan Quiz feature with React frontend and Firebase backend, driving personalized lesson plan generation from quiz responses.',
     ],

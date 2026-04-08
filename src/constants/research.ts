@@ -1,9 +1,9 @@
 export const research = [
   {
-    title: 'Graduate Research Assistant – Data Analyst',
-    venue: 'Virginia Tech · AI in CS Education',
+    title: 'AI in CS Education',
+    venue: 'Virginia Tech',
     year: 'Aug 2025 – Present',
-    description: 'Analyzed student quiz performance and LLM usage patterns across 367 students using Python/pandas.',
+    description: 'Investigating how to responsibly incorporate AI and LLMs into CS curricula through evidence-based teaching approaches and assessment tools, funded by a CETL grant and recognized at SIGCSE 2026.',
     bullets: [
       'Analyzed the relationship between student quiz performance and LLM usage patterns using Python and pandas to consolidate 7 Canvas quiz CSV exports into unified per-student tables.',
       'Implemented consent-aware ID mapping with deduplication and inner-join merging, generating exclusion reports for unmatched and non-consented records.',
@@ -13,10 +13,10 @@ export const research = [
     ],
   },
   {
-    title: 'Graduate Research Assistant – DBWorkout',
+    title: 'DBWorkout',
     venue: 'Virginia Tech',
     year: 'Aug 2025 – Present',
-    description: 'Built Flask API endpoints and integrated OpenAI API to generate LLM-powered database tasks and schemas for instructor workflows.',
+    description: 'Building LLM-powered tooling for a collaborative SQL practice platform designed to support real-time classroom learning and instructor workflows.',
     bullets: [
       'Tested course API endpoints in Postman for student/professor roles, validating authentication and authorization workflows.',
       'Developed Flask API endpoints to generate and persist LLM-produced tasks and database schemas for instructor workflows.',
@@ -26,10 +26,10 @@ export const research = [
     ],
   },
   {
-    title: 'Graduate Research Assistant – Classroom Evaluation',
+    title: 'Multimodal Classroom Evaluation',
     venue: 'Virginia Tech',
     year: 'Aug 2025 – Present',
-    description: 'Built React dashboards with Recharts to visualize real-time engagement metrics from gaze/posture detection models.',
+    description: 'Contributing to an AI-assisted classroom observation framework that combines computer vision and NLP to analyze student engagement and provide instructors with privacy-preserving, multimodal feedback, funded by a 4-VA Collaborative Research Grant.',
     bullets: [
       'Conducted 10+ literature reviews over 6 weeks to research evaluation metrics and analysis methodologies for classroom engagement assessment.',
       'Built interactive React dashboards using Recharts to visualize engagement metrics, including time-series plots of average student engagement over class sessions.',

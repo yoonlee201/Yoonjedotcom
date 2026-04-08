@@ -1,7 +1,20 @@
 export const projects = [
   {
+    name: 'MCCS — Visual Inventory Management System',
+    period: 'Jan 2026 – Present',
+    description: 'Computer vision system to detect empty shelf spaces in retail environments, with a full-stack management portal for real-time monitoring.',
+    stack: ['Vite', 'Flask', 'PostgreSQL', 'Docker'],
+    bullets: [
+      'Developing a computer vision pipeline to detect empty shelf spaces in retail environments using image processing techniques.',
+      'Established login, registration, email-based account verification, real-time notification, and employee invitation system.',
+      'Standardized task assignments and Scrum across the development team to ensure consistent progress and on-time sprint deliveries.',
+    ],
+    github: '',
+    demo: '',
+  },
+  {
     name: 'GlobalDB',
-    period: 'Sep 2025 – Present',
+    period: 'Sep 2025 – Dec 2025',
     description: 'LLM-powered platform for discovering public datasets and running SQL-based exploration, cleaning, and queries through a natural language interface.',
     stack: ['Vite', 'Flask', 'PostgreSQL', 'OpenAI API', 'Docker', 'Google Cloud'],
     bullets: [
@@ -11,7 +24,7 @@ export const projects = [
       'Engineered file ingestion pipeline accepting CSV, TSV, SQLite, and other formats — normalizing all uploads to SQLite before syncing to Google Drive for consistent storage.',
       'Containerized the full application with Docker and deployed on Google Cloud Services, ensuring scalable and reliable production infrastructure.',
     ],
-    github: '',   // e.g. 'https://github.com/ylee201/globaldb'
+    github: 'https://github.com/yoonlee201/globaldb',   // e.g. 'https://github.com/ylee201/globaldb'
     demo: '',     // e.g. 'https://globaldb.vercel.app'
   },
   {

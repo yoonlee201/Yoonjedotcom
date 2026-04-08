@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import Sidebar from './Sidebar'
 import About from './tabs/About'
 import Education from './tabs/Education'
@@ -6,10 +6,10 @@ import Experience from './tabs/Experience'
 import Projects from './tabs/Projects'
 import Research from './tabs/Research'
 import Contacts from './tabs/Contacts'
-import profileFront from '../assets/YoonjeProfile.JPG' // update path as needed
-// import profileBack from './assets/profile.jpg' // or remove if you just want a text back
+import Resume from './tabs/Resume'
+import profileFront from '../assets/YoonjeProfile.JPG' 
 
-export type Tab = 'about' | 'education' | 'experience' | 'projects' | 'research' | 'contacts'
+export type Tab = 'about' | 'education' | 'experience' | 'projects' | 'research' | 'contacts' | 'resume'
 
 const tabComponents: Record<Tab, React.ReactNode> = {
   about: <About />,
@@ -18,42 +18,15 @@ const tabComponents: Record<Tab, React.ReactNode> = {
   projects: <Projects />,
   research: <Research />,
   contacts: <Contacts />,
+  resume: <Resume />,
 }
 
 export default function Layout() {
   const [activeTab, setActiveTab] = useState<Tab>('about')
-  const cardRef = useRef<HTMLDivElement>(null)
-  const [tilt, setTilt] = useState({ x: 0, y: 0 })
-  const [hovering, setHovering] = useState(false)
-  const rafRef = useRef<number>(0)
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!cardRef.current) return
-    const rect = cardRef.current.getBoundingClientRect()
-    const dx = (e.clientX - (rect.left + rect.width / 2)) / (rect.width / 2)
-    const dy = (e.clientY - (rect.top + rect.height / 2)) / (rect.height / 2)
-    cancelAnimationFrame(rafRef.current)
-    rafRef.current = requestAnimationFrame(() => setTilt({ x: dy * -3, y: dx * 3 }))
-  }
-
-  const handleMouseLeave = () => {
-    setHovering(false)
-    cancelAnimationFrame(rafRef.current)
-    setTilt({ x: 0, y: 0 })
-  }
 
   return (
     <div className="min-h-screen bg-bg flex items-center justify-center p-6">
-      <div
-        ref={cardRef}
-        className="card-3d relative w-full max-w-6xl"
-        style={{
-          transform: `perspective(1400px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg) scale(${hovering ? 1.005 : 1})`,
-        }}
-        onMouseMove={handleMouseMove}
-        onMouseEnter={() => setHovering(true)}
-        onMouseLeave={handleMouseLeave}
-      >
+      <div className="relative w-full max-w-6xl">
         {/* depth shadow layer */}
         <div className="card-depth rounded-3xl" />
 
@@ -82,7 +55,7 @@ export default function Layout() {
           <div className="w-px bg-border/50 shrink-0" />
 
           <main className="flex-1 overflow-y-auto p-10 bg-surface">
-            <div key={activeTab} className="tab-fade">
+            <div key={activeTab} className="tab-fade h-full">
               {tabComponents[activeTab]}
             </div>
           </main>

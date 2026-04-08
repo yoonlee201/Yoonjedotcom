@@ -9,6 +9,7 @@ const tabs: { id: Tab; label: string }[] = [
   { id: 'projects', label: 'Projects' },
   { id: 'research', label: 'Research' },
   { id: 'contacts', label: 'Contacts' },
+  { id: 'resume', label: 'Resume' },
 ]
 
 interface SidebarProps {

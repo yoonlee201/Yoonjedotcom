@@ -39,6 +39,21 @@ body {
   --color-hover: #2c2c2e;
 }
 
+/* ── scrollbars ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted);
+}
+
 /* ── 3D card ── */
 .card-3d {
   transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
